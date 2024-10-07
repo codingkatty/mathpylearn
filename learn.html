@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Coding Platform - Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+</head>
+<body id="learn">
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="challenge.html">Challenge</a>
+    </div>
+
+    <div class="content">
+        <h2>Python Lessons</h2>
+        <ul id="learn-list">
+            <li><a href="#" onclick="showEditor('Hello World')">Hello World</a></li>
+            <li><a href="#" onclick="showEditor('Variables')">Variables</a></li>
+            <li><a href="#" onclick="showEditor('Conditionals')">Conditionals</a></li>
+        </ul>
+        <div id="editor-container">
+            <div id="editor"></div>
+            <div id="terminal-container">
+                <div id="terminal"></div>
+                <button id="run-button" onclick="runCode()">Run Code</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
