@@ -2,7 +2,9 @@
 
 We welcome contributions to Math4Python, a project dedicated to teaching the fundamentals of Python programming through essential mathematical operations. Your contributions will help create an engaging learning platform that equips users with the skills to efficiently use math in data processing and other practical scenarios.
 
-Our progress: 
+7/10/2024 9:28 PM: Started with some AI generated stuff. The site structure is made... abit.
+
+[Math 4 Python Link](https://magicmath.co)
 
 ---
 
