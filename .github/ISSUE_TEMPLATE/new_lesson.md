@@ -2,7 +2,7 @@
 name: New Lesson 🔡
 about: Have you got a nice idea for a lesson?
 title: "[CLASS] Title of your Lesson"
-labels: lesson
+labels: "lesson,hacktoberfest"
 assignees: ''
 
 ---
