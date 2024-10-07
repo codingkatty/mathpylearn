@@ -49,7 +49,7 @@ body {
     width: 60%;
     height: 400px;
     border: 1px solid #ccc;
-    font-size: 16px; /* Increase base font size for the editor */
+    font-size: 20px; /* Increase base font size for the editor */
 }
 #terminal-container {
     width: 35%;
@@ -79,6 +79,9 @@ body {
 }
 #run-button:hover {
     background-color: #0056b3;
+}
+.ace_editor {
+    font-size: 20px !important; /* Increased from 16px */
 }
 
 /* Custom styles for Ace editor */
