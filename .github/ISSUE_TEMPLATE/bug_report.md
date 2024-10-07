@@ -2,7 +2,7 @@
 name: Fix a Bug 🪱
 about: Have you found a bug?
 title: "[BUG] Title of the bug"
-labels: bug
+labels: "bug,hacktoberfest"
 assignees: ''
 
 ---
