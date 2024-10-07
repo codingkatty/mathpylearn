@@ -2,8 +2,12 @@ let editor;
 let pyodide;
 
 async function initPyodide() {
-    pyodide = await loadPyodide();
-    console.log("Pyodide loaded");
+    try {
+        pyodide = await loadPyodide();
+        console.log("Pyodide loaded successfully");
+    } catch (error) {
+        console.error("Failed to load Pyodide:", error);
+    }
 }
 
 // Call this function when the page loads
@@ -15,19 +19,23 @@ function showEditor(lesson) {
         editor = ace.edit("editor");
         editor.setTheme("ace/theme/monokai");
         editor.session.setMode("ace/mode/python");
+        editor.setOptions({
+            fontSize: "18px"  // Increased from 16px
+        });
     }
     editor.setValue(`# ${lesson} lesson\n# Start coding here`);
 }
 
 async function runCode() {
+    const terminal = document.getElementById('terminal');
+    terminal.innerHTML += '> Running code...\n';
+
     if (!pyodide) {
-        console.error("Pyodide is not loaded yet");
+        terminal.innerHTML += 'Error: Pyodide is not loaded. Please refresh the page and try again.\n';
         return;
     }
 
     const code = editor.getValue();
-    const terminal = document.getElementById('terminal');
-    terminal.innerHTML += '> Running code...\n';
 
     try {
         // Redirect stdout to capture print statements
