@@ -49,6 +49,7 @@ body {
     width: 60%;
     height: 400px;
     border: 1px solid #ccc;
+    font-size: 16px; /* Increase base font size for the editor */
 }
 #terminal-container {
     width: 35%;
@@ -64,6 +65,7 @@ body {
     box-sizing: border-box;
     overflow-y: auto;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 16px; /* Match terminal font size to editor */
 }
 #run-button {
     margin-top: 10px;
@@ -77,4 +79,9 @@ body {
 }
 #run-button:hover {
     background-color: #0056b3;
+}
+
+/* Custom styles for Ace editor */
+.ace_editor {
+    font-size: 16px !important; /* Increase font size */
 }
