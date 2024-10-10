@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math 4 Python</title>
+    <title>Math 4 Python - Challenges</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="challenge">
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="learn.html">Learn</a>
-        <a href="challenge.html">Challenge</a>
+        <a href="challenge.html" class="active">Challenge</a>
     </div>
 
     <div class="content">
         <h2>Challenges</h2>
-        <p>Coming soon...</p>
+        <p>Welcome to the challenges section! Here you can test your skills with various coding challenges.</p>
+        
+        <h3>Example Challenges:</h3>
+        <ul id="challenge-list">
+            <li><a href="#" onclick="viewChallenge('Basic Math Challenge')">Basic Math Challenge</a></li>
+            <li><a href="#" onclick="viewChallenge('Logic Challenge')">Logic Challenge</a></li>
+            <li><a href="#" onclick="viewChallenge('Data Structures Challenge')">Data Structures Challenge</a></li>
+        </ul>
+
+        <section class="challenge-description" id="challenge-description">
+            <h3>Challenge Description</h3>
+            <p>Select a challenge from the list to view its description and instructions.</p>
+        </section>
     </div>
 
     <script src="script.js"></script>

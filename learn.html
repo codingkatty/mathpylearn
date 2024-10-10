@@ -11,22 +11,30 @@
 <body id="learn">
     <div class="navbar">
         <a href="index.html">Home</a>
-        <a href="learn.html">Learn</a>
+        <a href="learn.html" class="active">Learn</a>
         <a href="challenge.html">Challenge</a>
     </div>
 
     <div class="content">
         <h2>Python Lessons</h2>
+        <p>Welcome to the Python lessons! Choose a lesson below to get started. You can write and execute your code in the editor provided.</p>
+        
         <ul id="learn-list">
             <li><a href="#" onclick="showEditor('Hello World')">Hello World</a></li>
             <li><a href="#" onclick="showEditor('Variables')">Variables</a></li>
             <li><a href="#" onclick="showEditor('Conditionals')">Conditionals</a></li>
+            <li><a href="#" onclick="showEditor('Loops')">Loops</a></li>
+            <li><a href="#" onclick="showEditor('Functions')">Functions</a></li>
         </ul>
+        
         <div id="editor-container">
             <div id="editor"></div>
             <div id="terminal-container">
                 <div id="terminal"></div>
-                <button id="run-button" onclick="runCode()">Run Code</button>
+                <div id="button-container">
+                    <button id="run-button" onclick="runCode()">Run Code</button>
+                    <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button> <!-- Clear Terminal Button -->
+                </div>
             </div>
         </div>
     </div>

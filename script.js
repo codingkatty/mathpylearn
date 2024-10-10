@@ -13,7 +13,6 @@ async function initPyodide() {
 // Call this function when the page loads
 initPyodide();
 
-// Show editor as soon as the page loads
 function showEditor(lesson) {
     document.getElementById('editor-container').style.display = 'flex';
     if (!editor) {
@@ -29,11 +28,7 @@ function showEditor(lesson) {
 
 async function runCode() {
     const terminal = document.getElementById('terminal');
-    
-    // Clear the terminal before each run
-    terminal.innerHTML = '';  // This will clear the terminal content
-    
-    terminal.innerHTML += '> Running code...<br>';
+    terminal.innerHTML += '> Running code...<br>';  // Use <br> instead of \n
 
     if (!pyodide) {
         terminal.innerHTML += 'Error: Pyodide is not loaded. Please refresh the page and try again.<br>';
@@ -69,24 +64,58 @@ async function runCode() {
     terminal.scrollTop = terminal.scrollHeight;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Show the editor only on the page where it is needed
-    const editorPage = "learn";  // Change this to the correct page where the editor should show
-    if (document.body.id === editorPage) {
-        showEditor();  // Show the editor only on the specific page
+// Function to clear the terminal
+function clearTerminal() {
+    const terminal = document.getElementById('terminal');
+    terminal.innerHTML = '';  // Clear the terminal output
+}
+
+function viewChallenge(challengeName) {
+    const description = document.getElementById('challenge-description');
+    
+    switch (challengeName) {
+        case 'Basic Math Challenge':
+            description.innerHTML = `
+                <h4>Basic Math Challenge</h4>
+                <p>Test your skills in basic arithmetic operations. Solve the problems below:</p>
+                <ul>
+                    <li>What is 5 + 7?</li>
+                    <li>What is 12 - 4?</li>
+                    <li>What is 3 * 8?</li>
+                    <li>What is 16 / 4?</li>
+                </ul>
+            `;
+            break;
+        case 'Logic Challenge':
+            description.innerHTML = `
+                <h4>Logic Challenge</h4>
+                <p>Use your logical thinking to solve these puzzles:</p>
+                <ul>
+                    <li>If two's company, and three's a crowd, what are four and five?</li>
+                    <li>What has keys but can't open locks?</li>
+                </ul>
+            `;
+            break;
+        case 'Data Structures Challenge':
+            description.innerHTML = `
+                <h4>Data Structures Challenge</h4>
+                <p>Apply your knowledge of data structures in these coding problems:</p>
+                <ul>
+                    <li>Implement a stack using an array.</li>
+                    <li>Write a function to reverse a linked list.</li>
+                </ul>
+            `;
+            break;
+        default:
+            description.innerHTML = `<p>Select a challenge to view its description.</p>`;
     }
+}
 
-    // Highlight the active navbar item based on the current page URL
-    const currentPage = window.location.pathname.split("/").pop();  // Get the current page filename
-
-    // Loop through all the navbar links
-    const navLinks = document.querySelectorAll('.navbar a');
-    navLinks.forEach(link => {
-        // Check if the href of the link matches the current page
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');  // Remove active class from non-matching links
-        }
-    });
+// Ensure the active link in the navbar reflects the current page
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = document.body.id;
+    const activeLink = document.querySelector(`.navbar a[href="${currentPage}.html"]`);
+    if (activeLink) {
+        activeLink.classList.add('active');
+    }
 });
