@@ -64,7 +64,7 @@ body {
     padding: 10px;
     box-sizing: border-box;
     overflow-y: auto;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
     font-size: 16px; /* Match terminal font size to editor */
 }
 #run-button {
