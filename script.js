@@ -71,7 +71,7 @@ async function runCode() {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Show the editor only on the page where it is needed
-    const editorPage = "learn-page";  // Change this to the correct page where the editor should show
+    const editorPage = "learn";  // Change this to the correct page where the editor should show
     if (document.body.id === editorPage) {
         showEditor();  // Show the editor only on the specific page
     }
