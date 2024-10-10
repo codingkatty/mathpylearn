@@ -17,7 +17,7 @@ function showEditor(lesson) {
     document.getElementById('editor-container').style.display = 'flex';
     if (!editor) {
         editor = ace.edit("editor");
-        editor.setTheme("ace/theme/monokai");
+        editor.setTheme("ace/theme/twilight");
         editor.session.setMode("ace/mode/python");
         editor.setOptions({
             fontSize: "18px"  // Increased from 16px
@@ -28,10 +28,10 @@ function showEditor(lesson) {
 
 async function runCode() {
     const terminal = document.getElementById('terminal');
-    terminal.innerHTML += '> Running code...\n';
+    terminal.innerHTML += '> Running code...<br>';  // Use <br> instead of \n
 
     if (!pyodide) {
-        terminal.innerHTML += 'Error: Pyodide is not loaded. Please refresh the page and try again.\n';
+        terminal.innerHTML += 'Error: Pyodide is not loaded. Please refresh the page and try again.<br>';
         return;
     }
 
@@ -50,15 +50,17 @@ async function runCode() {
 
         // Get the captured output
         const output = pyodide.runPython("sys.stdout.getvalue()");
-        terminal.innerHTML += output;
+
+        // Use <br> to replace newlines in the output
+        terminal.innerHTML += output.replace(/\n/g, '<br>');
 
         // Reset stdout
         pyodide.runPython("sys.stdout = sys.__stdout__");
     } catch (error) {
-        terminal.innerHTML += `Error: ${error.message}\n`;
+        terminal.innerHTML += `Error: ${error.message}<br>`;
     }
 
-    terminal.innerHTML += '> Code execution completed.\n\n';
+    terminal.innerHTML += '> Code execution completed.<br><br>';
     terminal.scrollTop = terminal.scrollHeight;
 }
 
