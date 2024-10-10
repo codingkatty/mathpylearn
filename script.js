@@ -13,6 +13,7 @@ async function initPyodide() {
 // Call this function when the page loads
 initPyodide();
 
+// Show editor as soon as the page loads
 function showEditor(lesson) {
     document.getElementById('editor-container').style.display = 'flex';
     if (!editor) {
@@ -28,7 +29,11 @@ function showEditor(lesson) {
 
 async function runCode() {
     const terminal = document.getElementById('terminal');
-    terminal.innerHTML += '> Running code...<br>';  // Use <br> instead of \n
+    
+    // Clear the terminal before each run
+    terminal.innerHTML = '';  // This will clear the terminal content
+    
+    terminal.innerHTML += '> Running code...<br>';
 
     if (!pyodide) {
         terminal.innerHTML += 'Error: Pyodide is not loaded. Please refresh the page and try again.<br>';
@@ -65,6 +70,9 @@ async function runCode() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Show the editor when the page loads without requiring user input
+    showEditor();
+
     const currentPage = document.body.id;
     document.querySelector(`.navbar a[href="${currentPage}.html"]`).classList.add('active');
 });
