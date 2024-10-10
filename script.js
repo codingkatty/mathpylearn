@@ -70,9 +70,23 @@ async function runCode() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Show the editor when the page loads without requiring user input
-    showEditor();
+    // Show the editor only on the page where it is needed
+    const editorPage = "learn-page";  // Change this to the correct page where the editor should show
+    if (document.body.id === editorPage) {
+        showEditor();  // Show the editor only on the specific page
+    }
 
-    const currentPage = document.body.id;
-    document.querySelector(`.navbar a[href="${currentPage}.html"]`).classList.add('active');
+    // Highlight the active navbar item based on the current page URL
+    const currentPage = window.location.pathname.split("/").pop();  // Get the current page filename
+
+    // Loop through all the navbar links
+    const navLinks = document.querySelectorAll('.navbar a');
+    navLinks.forEach(link => {
+        // Check if the href of the link matches the current page
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');  // Remove active class from non-matching links
+        }
+    });
 });
