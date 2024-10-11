@@ -20,10 +20,48 @@ function showEditor(lesson) {
         editor.setTheme("ace/theme/twilight");
         editor.session.setMode("ace/mode/python");
         editor.setOptions({
-            fontSize: "18px"  // Increased from 16px
+            fontSize: "18px"
         });
     }
-    editor.setValue(`# ${lesson} lesson\n# Start coding here`);
+
+    // Update the editor content based on the lesson chosen
+    if (lesson === 'Hello World') {
+        editor.setValue(`
+# I'll walk the user through the print statement and explain its purpose and usage.
+
+# Lesson: Hello World in Python
+# The print() function is used to display output to the user.
+# In Python, we use print() to send text, numbers, or other data types to the terminal or console.
+
+# Example:
+print("Hello, World!")
+
+# Explanation:
+# The print statement above will display the text "Hello, World!" in the console.
+# Whatever is inside the quotes ("") will be printed exactly as it is.
+# print() can also display numbers or variables. For example:
+
+number = 5
+print(number)  # This will print the number 5.
+
+# Try changing the text inside the print() function and run the code!`);
+    } else if (lesson === 'Variables') {
+        editor.setValue(`# Lesson: Variables in Python
+# Variables are containers for storing data values. In Python, a variable is created the moment you assign a value to it.
+
+# Example:
+x = 5
+y = "Hello"
+print(x)
+print(y)
+
+# Explanation:
+# In this example, x is a variable with a value of 5, and y is a variable with a value of "Hello".
+# Python is dynamically typed, meaning you don't need to declare the variable type (e.g., int, string) explicitly.
+# You can assign any value to a variable, and the print() function will output the value.`);
+    } else {
+        editor.setValue(`# ${lesson} lesson\n# Start coding here`);
+    }
 }
 
 async function runCode() {
@@ -69,6 +107,7 @@ function clearTerminal() {
     const terminal = document.getElementById('terminal');
     terminal.innerHTML = '';  // Clear the terminal output
 }
+
 
 function viewChallenge(challengeName) {
     const description = document.getElementById('challenge-description');
