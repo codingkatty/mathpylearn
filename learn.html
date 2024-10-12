@@ -3,38 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math 4 Python</title>
+    <title>Math 4 Python - Learn</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="shortcut icon" href="newlogo.ico" type="image/x-icon">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
 </head>
 <body id="learn" onload="showEditor('Unititled')">
     <div class="navbar">
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="learn.html" class="active">Learn</a>
+            <a href="challenge.html">Challenge</a>
+        </div>
+        <div class="theme-toggle-wrapper">
+            <button id="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+
         <a class="logo" href="index.html"><img src="logonew.svg" height="40" width="40"></a>
         <a href="learn.html" class="active">Learn</a>
         <a href="challenge.html">Challenge</a>
+
     </div>
 
     <div class="content">
         <h2>Python Lessons</h2>
         <p>Welcome to the Python lessons! Choose a lesson below to get started. You can write and execute your code in the editor provided.</p>
         
-        <ul id="learn-list">
-            <li><a href="#" onclick="showEditor('Hello World')">Hello World</a></li>
-            <li><a href="#" onclick="showEditor('Variables')">Variables</a></li>
-            <li><a href="#" onclick="showEditor('Conditionals')">Conditionals</a></li>
-            <li><a href="#" onclick="showEditor('Loops')">Loops</a></li>
-            <li><a href="#" onclick="showEditor('Functions')">Functions</a></li>
-        </ul>
-        
-        <div id="editor-container">
-            <div id="editor"></div>
-            <div id="terminal-container">
-                <div id="terminal"></div>
+        <div class="learn-container">
+            <div class="lesson-list">
+                <ul id="learn-list">
+                    <li><a href="#" onclick="showEditor('Hello World')">Hello World</a></li>
+                    <li><a href="#" onclick="showEditor('Variables')">Variables</a></li>
+                    <li><a href="#" onclick="showEditor('Conditionals')">Conditionals</a></li>
+                    <li><a href="#" onclick="showEditor('Loops')">Loops</a></li>
+                    <li><a href="#" onclick="showEditor('Functions')">Functions</a></li>
+                </ul>
+            </div>
+            <div class="editor-area">
+                <div id="editor-container">
+                    <div id="editor"></div>
+                    <div id="terminal-container">
+                        <div id="terminal"></div>
+                    </div>
+                </div>
                 <div id="button-container">
                     <button id="run-button" onclick="runCode()">Run Code</button>
-                    <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button> <!-- Clear Terminal Button -->
+                    <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button>
                 </div>
             </div>
         </div>
