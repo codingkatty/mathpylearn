@@ -5,6 +5,7 @@ We welcome contributions to Math4Python, a project dedicated to teaching the fun
 📆 Progress Updates
 - 7/10/2024 9:28 PM: Started with some AI generated stuff. The site structure is made... abit.
 - 10/10/2024 1:42 PM: Small tweaks were made.
+- 11~12/10/2024: Many PRs were created and merged!
 
 [Math 4 Python Link](https://magicmath.co)
 
