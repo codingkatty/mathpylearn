@@ -304,6 +304,10 @@ body {
     cursor: pointer;
 }
 
+.theme-toggle-wrapper{
+    transform: translateX(-60px);
+}
+
 #theme-toggle{
     background-color: transparent;
     border: none;
@@ -579,4 +583,11 @@ body.dark-theme #run-button:hover {
 
 body.dark-theme #clear-button:hover {
     background-color: #c82333; /* Darker red on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .theme-toggle-wrapper{
+        transform: translateX(0px);
+    }
+    
 }
