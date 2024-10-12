@@ -64,16 +64,42 @@ print(greet("Alice"))`, 1);
 }
 
 async function runCode() {
+    // Clear the terminal
+    clearTerminal();
+
+    // Get the code from the editor
     const code = editor.getValue();
     const terminal = document.getElementById('terminal');
-    terminal.innerHTML += 'Running code...\n';
+
+    // Run the code using Pyodide
     try {
-        let output = await pyodide.runPythonAsync(code);
-        terminal.innerHTML += `Output:\n${output}\n`;
+        await pyodide.runPythonAsync(`
+import sys
+from io import StringIO
+
+# Create a buffer to capture stdout
+output_buffer = StringIO()
+sys.stdout = output_buffer
+
+try:
+    # Run the user code
+    ${code.split('\n').map(line => '    ' + line).join('\n')}
+except Exception as e:
+    print(f"Error: {e}")
+
+# Reset stdout and get the output
+sys.stdout = sys.__stdout__
+output = output_buffer.getvalue()
+output
+        `).then(output => {
+            // console.log(output);
+            terminal.innerHTML += output;
+        });
     } catch (err) {
         terminal.innerHTML += `Error:\n${err}\n`;
     }
 }
+
 
 function clearTerminal() {
     document.getElementById('terminal').innerHTML = '';
