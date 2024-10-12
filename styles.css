@@ -296,6 +296,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+}
+
+.navbar a.logo {
+    background-color: #333 !important;
+    cursor: pointer;
 }
 
 #theme-toggle{
@@ -314,7 +320,13 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    height: 100%;
     transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+    height: 40px;
+   text-align: center;
+    line-height: 40px;
+    
+   
 }
 
 .navbar a:hover {
