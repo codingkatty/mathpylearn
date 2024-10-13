@@ -1,5 +1,6 @@
 let editor;
 let pyodide;
+let currentLesson;
 
 // Add these lines at the beginning of the file
 let userProgress = JSON.parse(localStorage.getItem('userProgress')) || {
@@ -74,6 +75,7 @@ async function initPyodide() {
 window.addEventListener('load', initPyodide);
 
 function showEditor(lesson) {
+    currentLesson = lesson;
     document.getElementById('editor-container').style.display = 'flex';
     if (!editor) {
         editor = ace.edit("editor");
@@ -305,6 +307,27 @@ document.addEventListener('DOMContentLoaded', () => {
     updateThemeIcon();
 });
 
+// genrate random quetions
+
+const questions = [
+    "Write a Python function to find the factorial of a number.",
+    "Write a Python program to check if a string is a palindrome.",
+    "Write a Python function to calculate the sum of numbers in a list.",
+    "Write a Python program to print the Fibonacci sequence.",
+    "Write a Python function to sort a list of numbers."
+    // Add more questions as needed
+];
+
+function generateQuestion() {
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    const randomQuestion = questions[randomIndex];
+    document.getElementById('random-question').innerText = randomQuestion;
+}
+
+// Call this function on page load if you want to display a question initially
+// generateQuestion();
+
+
 // For the challenge page
 
 function viewChallenge(challengeName) {
@@ -476,11 +499,13 @@ document.addEventListener('DOMContentLoaded', function() {
     updateProgressBar();
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
 
-    hamburger.addEventListener("click", () => {
+
+hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("show");
     });
   
@@ -497,3 +522,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateProgressBar();
 });
+
+
+// Reset button 
+document.getElementById('reset-code').addEventListener('click', () => {
+    if (currentLesson) {
+        showEditor(currentLesson); 
+    } 
+});
+
+document.getElementById('copy-code').addEventListener('click', () => {
+    const code = editor.getValue();
+    navigator.clipboard.writeText(code)
+        .then(() => {
+            const copyMessage = document.getElementById('copy-message');
+            copyMessage.style.display = 'block'; 
+            setTimeout(() => {
+                copyMessage.style.display = 'none'; 
+            }, 1000); 
+        })
+        .catch(err => {
+            console.error("Failed to copy text: ", err);
+        });
+});
+
