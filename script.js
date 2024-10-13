@@ -1,5 +1,6 @@
 let editor;
 let pyodide;
+let currentLesson;
 
 // Add these lines at the beginning of the file
 let userProgress = JSON.parse(localStorage.getItem('userProgress')) || {
@@ -74,6 +75,7 @@ async function initPyodide() {
 window.addEventListener('load', initPyodide);
 
 function showEditor(lesson) {
+    currentLesson = lesson;
     document.getElementById('editor-container').style.display = 'flex';
     if (!editor) {
         editor = ace.edit("editor");
@@ -476,6 +478,30 @@ document.addEventListener('DOMContentLoaded', function() {
     updateProgressBar();
 });
 
+
+// Reset button 
+document.getElementById('reset-code').addEventListener('click', () => {
+    if (currentLesson) {
+        showEditor(currentLesson); 
+    } 
+});
+
+
+document.getElementById('copy-code').addEventListener('click', () => {
+    const code = editor.getValue();
+    navigator.clipboard.writeText(code)
+        .then(() => {
+            const copyMessage = document.getElementById('copy-message');
+            copyMessage.style.display = 'block'; 
+            setTimeout(() => {
+                copyMessage.style.display = 'none'; 
+            }, 1000); 
+        })
+        .catch(err => {
+            console.error("Failed to copy text: ", err);
+        });
+});
+
 // Add this to your DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
     // ... existing code ...
@@ -493,3 +519,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateProgressBar();
 });
+
