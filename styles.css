@@ -24,22 +24,35 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 1rem;
+    gap: 6rem;
+}
+.title {
+    color: black;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    margin-left: 15px; /* Adjust this margin as per your layout */
+    margin-top: 8px;
+    position: relative; /* Use relative positioning to keep it in normal flow */
+    top: 0;
 }
 
+.theme-toggle-wrapper {
+    margin-left: 600px; /* Push to the right */
+}
 .navbar a {
-    color: #ecf0f1;
+    color: #050c0e;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 25px;
     font-weight: 500;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
+    font-family: 'Lobster', cursive;
 }
 
 .navbar a:hover, .navbar a.active {
     background-color: #34495e;
-    color: #3498db;
+    color: #e4e8eb;
 }
 
 /* Logo */
@@ -47,6 +60,7 @@ body {
     height: 40px;
     width: auto;
     transition: transform 0.3s ease;
+    border: 2px solid black;
 }
 
 .navbar .logo img:hover {
