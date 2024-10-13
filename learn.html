@@ -31,6 +31,10 @@
     <div class="content">
         <h2>Python Lessons</h2>
         <p>Welcome to the Python lessons! Choose a lesson below to get started.</p>
+        <div id="question-container">
+            <button id="generate-question-button" onclick="generateQuestion()">Click For Practice Question</button>
+            <p id="random-question"></p>
+        </div>
         <div class="learn-container">
             <div class="lesson-list">
                 <ul>
@@ -42,7 +46,11 @@
                     <li><a href="#" onclick="showEditor('Sets')">Sets</a></li>
                     <li><a href="#" onclick="showEditor('Dictionary')">Dictionary</a></li>
                 </ul>
+              
             </div>
+            <!-- Random quetion  -->
+         
+            
             <div class="editor-area">
                 <div id="editor-container">
                     <div id="editor"></div>

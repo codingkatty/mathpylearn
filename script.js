@@ -243,6 +243,27 @@ document.addEventListener('DOMContentLoaded', () => {
     updateThemeIcon();
 });
 
+// genrate random quetions
+
+const questions = [
+    "Write a Python function to find the factorial of a number.",
+    "Write a Python program to check if a string is a palindrome.",
+    "Write a Python function to calculate the sum of numbers in a list.",
+    "Write a Python program to print the Fibonacci sequence.",
+    "Write a Python function to sort a list of numbers."
+    // Add more questions as needed
+];
+
+function generateQuestion() {
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    const randomQuestion = questions[randomIndex];
+    document.getElementById('random-question').innerText = randomQuestion;
+}
+
+// Call this function on page load if you want to display a question initially
+// generateQuestion();
+
+
 // For the challenge page
 
 function viewChallenge(challengeName) {
