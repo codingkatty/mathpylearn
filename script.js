@@ -203,7 +203,6 @@ function viewChallenge(challengeName) {
     
     
 </ul>
-<p>Are you ready to take on the challenge? Let’s see how well you can apply dynamic programming to solve these problems!</p>
 
             `;
             break;
@@ -217,6 +216,66 @@ function viewChallenge(challengeName) {
     <li>Implement a library management system with classes for books, patrons, and loans.</li>
     
 </ul>
+            `;
+            break;
+        case 'Recursion':
+            description.innerHTML = `
+              <h4>Recursion Challenge</h4>
+                    <p>Challenge yourself with recursion! Take on the tasks below:</p>
+                    <ul>
+                      <li>Write a recursive function to calculate the factorial.</li>
+                      <li>Generate Fibonacci numbers recursively.</li>
+                      <li>Reverse a string using recursion.</li>
+                      <li>Solve the Tower of Hanoi problem recursively.</li>
+                      <li>Find the greatest common divisor (GCD) using recursion.</li>
+                    </ul>
+
+            `;
+            break;
+        case 'Search Algorithm':
+            description.innerHTML = `
+              <h4>Search Algorithm Challenge</h4>
+                <p>Test your search algorithm skills! Solve the tasks below:</p>
+                <ul>
+                    <li>Implement linear search to find an element in an unsorted list.</li>
+                    <li>Write a binary search function for a sorted list.</li>
+                    <li>Develop a function for depth-first search (DFS) on a graph.</li>
+                    <li>Implement breadth-first search (BFS) for a tree.</li>
+                    <li>Count occurrences of a specific element in a list.</li>
+                </ul>
+
+
+            `;
+            break;
+        case 'Array':
+            description.innerHTML = `
+              <h4>Array Challenge</h4>
+<p>Put your array skills to the test! Complete the tasks below:</p>
+<ul>
+    <li>Write a function to find the maximum and minimum elements in an array.</li>
+    <li>Implement a function to rotate an array by a given number of positions.</li>
+    <li>Merge two sorted arrays into one sorted array.</li>
+    <li>Find the second largest element in an array.</li>
+    <li>Remove duplicates from an array while maintaining order.</li>
+</ul>
+
+
+            `;
+            break;
+        case 'Graph':
+            description.innerHTML = `
+              <h4>Graph Algorithms Challenge</h4>
+              <p>Test your graph algorithm skills! This challenge will assess your ability to traverse graphs and find shortest paths. Solve the tasks below:</p>
+              <ul>
+                  <li>Implement Depth-First Search (DFS) from a starting vertex.</li>
+                  <li>Implement Breadth-First Search (BFS) to visit all vertices.</li>
+                  <li>Apply Dijkstra's algorithm for the shortest path in a weighted graph.</li>
+                  <li>Add edges for both directed and undirected graphs.</li>
+                  <li>Represent the graph using adjacency lists.</li>
+              </ul>
+
+
+
             `;
             break;
         default:
