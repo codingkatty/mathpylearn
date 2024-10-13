@@ -26,19 +26,19 @@ function showEditor(lesson) {
 
     // Update the editor content based on the lesson chosen
     if (lesson === 'Hello World') {
-        editor.setValue(`
+        editor.setValue(`\
 # Lesson: Hello World in Python
 # The print() function is used to display output to the console.
-print("Hello, World!")`, 1); // 1 to move cursor to the end
+print("Hello, World!")`, 1);
     } else if (lesson === 'Variables') {
-        editor.setValue(`
+        editor.setValue(`\
 # Lesson: Variables in Python
 # Variables are used to store data. 
 x = 10  # This is an integer variable
 name = "Alice"  # This is a string variable
-print(x, name)`, 1); // 1 to move cursor to the end
+print(x, name)`, 1);
     } else if (lesson === 'Conditionals') {
-        editor.setValue(`
+        editor.setValue(`\
 # Lesson: Conditionals in Python
 # Conditionals allow you to make decisions in your code.
 x = 10
@@ -47,19 +47,45 @@ if x > 5:
 else:
     print("x is not greater than 5")`, 1);
     } else if (lesson === 'Loops') {
-        editor.setValue(`
+        editor.setValue(`\
 # Lesson: Loops in Python
 # Loops allow you to repeat code multiple times.
 for i in range(5):
     print(f"This is iteration {i+1}")`, 1);
     } else if (lesson === 'Functions') {
-        editor.setValue(`
+        editor.setValue(`\
 # Lesson: Functions in Python
 # Functions allow you to group code that performs a specific task.
 def greet(name):
     return f"Hello, {name}!"
 
 print(greet("Alice"))`, 1);
+    } else if (lesson === 'Sets') {  // New lesson added here
+        editor.setValue(`\
+# Lesson: Sets in Python
+# Sets are collections of unique elements.
+my_set = {1, 2, 3, 4, 5}
+print("Original set:", my_set)
+
+# Adding an element
+my_set.add(6)
+print("After adding 6:", my_set)
+
+# Removing an element
+my_set.remove(3)
+print("After removing 3:", my_set)
+
+# Checking if an element exists
+if 2 in my_set:
+    print("2 is in the set")
+
+# Set operations
+another_set = {4, 5, 6, 7}
+union_set = my_set.union(another_set)
+print("Union of sets:", union_set)
+
+intersection_set = my_set.intersection(another_set)
+print("Intersection of sets:", intersection_set)`, 1);
     }
 }
 
@@ -73,7 +99,7 @@ async function runCode() {
 
     // Run the code using Pyodide
     try {
-        await pyodide.runPythonAsync(`
+        await pyodide.runPythonAsync(`\
 import sys
 from io import StringIO
 
@@ -92,14 +118,12 @@ sys.stdout = sys.__stdout__
 output = output_buffer.getvalue()
 output
         `).then(output => {
-            // console.log(output);
             terminal.innerHTML += output;
         });
     } catch (err) {
         terminal.innerHTML += `Error:\n${err}\n`;
     }
 }
-
 
 function clearTerminal() {
     document.getElementById('terminal').innerHTML = '';
@@ -137,7 +161,7 @@ function viewChallenge(challengeName) {
     
     switch (challengeName) {
         case 'Basic Math Challenge':
-            description.innerHTML = `
+            description.innerHTML = `\
                 <h4>Basic Math Challenge</h4>
                 <p>Test your skills in basic arithmetic operations. Solve the problems below:</p>
                 <ul>
@@ -149,7 +173,7 @@ function viewChallenge(challengeName) {
             `;
             break;
         case 'Logic Challenge':
-            description.innerHTML = `
+            description.innerHTML = `\
                 <h4>Logic Challenge</h4>
                 <p>Use your logical thinking to solve these puzzles:</p>
                 <ul>
@@ -159,7 +183,7 @@ function viewChallenge(challengeName) {
             `;
             break;
         case 'Data Structures Challenge':
-            description.innerHTML = `
+            description.innerHTML = `\
                 <h4>Data Structures Challenge</h4>
                 <p>Apply your knowledge of data structures in these coding problems:</p>
                 <ul>
