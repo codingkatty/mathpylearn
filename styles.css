@@ -483,6 +483,41 @@ body.dark-theme .accordion.active {
     background-color: #34495e;
 }
 
+/* About Page Style */
+.about-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.about-h1, .about-h2 {
+    text-align: center;
+    color: #2C3E50;
+}
+.about-p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.about-link {
+    color: #3498DB;
+    text-decoration: none;
+}
+.about-link:hover {
+    text-decoration: underline;
+}
+.banner h1 {
+    margin: 0;
+    font-size: 2em;
+}
+.about-section {
+    margin: 20px 0;
+} 
+body.dark-theme .about-container {
+    background-color: #0f3460;
+}
+
 /* Responsive design for challenge and FAQ pages */
 @media (max-width: 768px) {
     .challenge-container {
