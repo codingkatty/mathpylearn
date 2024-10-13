@@ -7,26 +7,48 @@
     <title>Math 4 Python - FAQs</title>
     <link rel="shortcut icon" href="Untitled design1.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hamburger_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
   </head>
   <body id="faq">
-    <div class="navbar">
+
+    <div class="navbar"> 
+        
+        <h1 class="title">MathPyLearn</h1>
+        <div class="theme-toggle-wrapper">
+            <button style="cursor: pointer;" id="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+
         <div class="nav-links">
+
+    <div class="navbar">
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Hamburger Menu for Desktop -->
+        <div class="nav-links" id="nav-links">
+
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="learn.html" >Learn</a>
             <a href="challenge.html">Challenge</a>
             <a href="faq.html" class="active">FAQs</a>
         </div>
-        <div class="theme-toggle-wrapper">
-            <button id="theme-toggle">
-                <i class="fas fa-sun"></i>
-                <i class="fas fa-moon"></i>
-            </button>
-        </div>
-        <a class="logo" href="index.html"><img src="logonew.svg" height="40" width="40" alt="Math 4 Python Logo"></a>
+        
+        <!-- <a href="learn.html" class="active">Learn</a>
+        <a href="challenge.html">Challenge</a> -->
     </div>
+
 
     <div class="content">
         <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
