@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="Untitled design1.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body id="learn" onload="showEditor('Untitled')">
     <div class="navbar">
@@ -33,11 +34,11 @@
 
     <div class="content">
         <h2>Python Lessons</h2>
-        <p>Welcome to the Python lessons! Choose a lesson below to get started. You can write and execute your code in the editor provided.</p>
+        <p>Welcome to the Python lessons! Choose a lesson below to get started.</p>
         
         <div class="learn-container">
             <div class="lesson-list">
-                <ul id="learn-list">
+                <ul>
                     <li><a href="#" onclick="showEditor('Hello World')">Hello World</a></li>
                     <li><a href="#" onclick="showEditor('Variables')">Variables</a></li>
                     <li><a href="#" onclick="showEditor('Conditionals')">Conditionals</a></li>
@@ -51,7 +52,7 @@
                 <div id="editor-container">
                     <div id="editor"></div>
                     <div id="terminal-container">
-                        <textarea id="terminal" readonly></textarea>
+                        <div id="terminal"></div>
                     </div>
                 </div>
                 <div id="button-container">
