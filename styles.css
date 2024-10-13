@@ -518,6 +518,31 @@ body.dark-theme .about-container {
     background-color: #0f3460;
 }
 
+#editor-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+#editor-controls button {
+    padding: 0.8rem 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #2ecc71;
+}
+
+#copy-message {
+    margin-left: 10px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    color: green; 
+}
+
 /* Responsive design for challenge and FAQ pages */
 @media (max-width: 768px) {
     .challenge-container {
