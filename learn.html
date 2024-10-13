@@ -50,8 +50,19 @@
                 </ul>
             </div>
             <div class="editor-area">
+                
                 <div id="editor-container">
+
+                    <div id="editor-controls">
+                        <button id="reset-code">Reset Code</button>
+                        <button id="copy-code">Copy Code</button>
+                        <p id="copy-message" style="display: none; color: black;">Copied!</p>                  
+                    </div>  
+
+                    <h2>Code Input :</h2>
+
                     <div id="editor"></div>
+                    <h2>Output :</h2>
                     <div id="terminal-container">
                         <div id="terminal"></div>
                     </div>
@@ -61,6 +72,15 @@
                     <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button>
                 </div>
             </div>
+        </div>
+        
+        <!-- Add this right after the <h2>Python Lessons</h2> line -->
+        <div class="progress-container">
+            <h3>Lesson Progress</h3>
+            <div class="progress-bar">
+                <div id="lesson-progress" class="progress"></div>
+            </div>
+            <button id="lesson-reset-btn" class="reset-btn">Reset Progress</button>
         </div>
     </div>
 
