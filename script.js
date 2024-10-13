@@ -141,9 +141,11 @@ function updateThemeIcon() {
     const moonIcon = themeToggle.querySelector('.fa-moon');
 
     if (document.body.classList.contains('dark-theme')) {
+        themeToggle.title = 'Switch to light theme';
         sunIcon.style.display = 'inline-block';
         moonIcon.style.display = 'none';
     } else {
+        themeToggle.title = 'Switch to dark theme';
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline-block';
     }
