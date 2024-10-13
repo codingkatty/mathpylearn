@@ -500,13 +500,36 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+
+hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+  
+    const lessonResetBtn = document.getElementById('lesson-reset-btn');
+    const challengeResetBtn = document.getElementById('challenge-reset-btn');
+
+    if (lessonResetBtn) {
+        lessonResetBtn.addEventListener('click', () => resetProgress('lesson'));
+    }
+
+    if (challengeResetBtn) {
+        challengeResetBtn.addEventListener('click', () => resetProgress('challenge'));
+    }
+
+    updateProgressBar();
+});
+
+
 // Reset button 
 document.getElementById('reset-code').addEventListener('click', () => {
     if (currentLesson) {
         showEditor(currentLesson); 
     } 
 });
-
 
 document.getElementById('copy-code').addEventListener('click', () => {
     const code = editor.getValue();
@@ -521,23 +544,5 @@ document.getElementById('copy-code').addEventListener('click', () => {
         .catch(err => {
             console.error("Failed to copy text: ", err);
         });
-});
-
-// Add this to your DOMContentLoaded event listener
-document.addEventListener('DOMContentLoaded', () => {
-    // ... existing code ...
-
-    const lessonResetBtn = document.getElementById('lesson-reset-btn');
-    const challengeResetBtn = document.getElementById('challenge-reset-btn');
-
-    if (lessonResetBtn) {
-        lessonResetBtn.addEventListener('click', () => resetProgress('lesson'));
-    }
-
-    if (challengeResetBtn) {
-        challengeResetBtn.addEventListener('click', () => resetProgress('challenge'));
-    }
-
-    updateProgressBar();
 });
 
