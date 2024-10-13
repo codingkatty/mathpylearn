@@ -184,6 +184,28 @@ function viewChallenge(challengeName) {
                 </ul>
             `;
             break;
+            case 'String Manipulation':
+            description.innerHTML = `
+                <h4>String Manipulation Challenge</h4>
+                <p>Put your string handling skills to the test! This challenge will assess your ability to manipulate and transform strings using various operations:</p>
+                <ul>
+                    <li>Reverse a given string and provide the result</li>
+                    <li>Check if a string is a palindrome.</li>
+                    <li>Convert the entire string to uppercase or lowercase.</li>
+                </ul>
+            `;
+            break;
+            case 'File Handling Challenge':
+            description.innerHTML = `
+                <h4>File Handling Challenge</h4>
+                <p>Put your file handling skills to the test! This challenge will assess your ability to read from and write to files, as well as manipulate their contents.:</p>
+                <ul>
+                    <li>Count the number of lines in a given text file.</li>
+                    <li>Search for a specific word in a file and display the line numbers where it appears</li>
+                    <li>Create a new file and write a list of strings into it, each on a new line.</li>
+                </ul>
+            `;
+            break;
         case 'Data Structures Challenge':
             description.innerHTML = `\
                 <h4>Data Structures Challenge</h4>
@@ -192,6 +214,92 @@ function viewChallenge(challengeName) {
                     <li>Implement a stack using an array.</li>
                     <li>Write a function to reverse a linked list.</li>
                 </ul>
+            `;
+            break;
+        case 'Dynamic Pogramming Challenge':
+            description.innerHTML = `
+                <h4>Dynamic Programming Challenge</h4>
+<p>Put your dynamic programming skills to the test!. Tackle the tasks below:</p>
+<ul>
+    <li>Implement a function to calculate the nth Fibonacci number using dynamic programming.</li>
+    <li>Solve the Knapsack problem: given a set of items, determine the maximum value that can be carried in a knapsack of a given capacity.</li>
+    <li>Write a function to find the length of the longest common subsequence between two strings.</li>
+    
+    
+</ul>
+
+            `;
+            break;
+        case 'Object-Oriented Programming':
+            description.innerHTML = `
+              <h4>Object-Oriented Programming Challenge</h4>
+<p>Test your object-oriented programming skills! This challenge will evaluate your ability to design and implement classes and objects. Take on the tasks below:</p>
+<ul>
+    <li>Design a bank account class with methods for deposit, withdrawal, and balance inquiry.</li>
+    <li>Create a class hierarchy for vehicles (Car, Truck, Motorcycle) inheriting from a base Vehicle class.</li>
+    <li>Implement a library management system with classes for books, patrons, and loans.</li>
+    
+</ul>
+            `;
+            break;
+        case 'Recursion':
+            description.innerHTML = `
+              <h4>Recursion Challenge</h4>
+                    <p>Challenge yourself with recursion! Take on the tasks below:</p>
+                    <ul>
+                      <li>Write a recursive function to calculate the factorial.</li>
+                      <li>Generate Fibonacci numbers recursively.</li>
+                      <li>Reverse a string using recursion.</li>
+                      <li>Solve the Tower of Hanoi problem recursively.</li>
+                      <li>Find the greatest common divisor (GCD) using recursion.</li>
+                    </ul>
+
+            `;
+            break;
+        case 'Search Algorithm':
+            description.innerHTML = `
+              <h4>Search Algorithm Challenge</h4>
+                <p>Test your search algorithm skills! Solve the tasks below:</p>
+                <ul>
+                    <li>Implement linear search to find an element in an unsorted list.</li>
+                    <li>Write a binary search function for a sorted list.</li>
+                    <li>Develop a function for depth-first search (DFS) on a graph.</li>
+                    <li>Implement breadth-first search (BFS) for a tree.</li>
+                    <li>Count occurrences of a specific element in a list.</li>
+                </ul>
+
+
+            `;
+            break;
+        case 'Array':
+            description.innerHTML = `
+              <h4>Array Challenge</h4>
+<p>Put your array skills to the test! Complete the tasks below:</p>
+<ul>
+    <li>Write a function to find the maximum and minimum elements in an array.</li>
+    <li>Implement a function to rotate an array by a given number of positions.</li>
+    <li>Merge two sorted arrays into one sorted array.</li>
+    <li>Find the second largest element in an array.</li>
+    <li>Remove duplicates from an array while maintaining order.</li>
+</ul>
+
+
+            `;
+            break;
+        case 'Graph':
+            description.innerHTML = `
+              <h4>Graph Algorithms Challenge</h4>
+              <p>Test your graph algorithm skills! This challenge will assess your ability to traverse graphs and find shortest paths. Solve the tasks below:</p>
+              <ul>
+                  <li>Implement Depth-First Search (DFS) from a starting vertex.</li>
+                  <li>Implement Breadth-First Search (BFS) to visit all vertices.</li>
+                  <li>Apply Dijkstra's algorithm for the shortest path in a weighted graph.</li>
+                  <li>Add edges for both directed and undirected graphs.</li>
+                  <li>Represent the graph using adjacency lists.</li>
+              </ul>
+
+
+
             `;
             break;
         default:
