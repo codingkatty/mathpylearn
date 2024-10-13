@@ -1,5 +1,66 @@
 let editor;
 let pyodide;
+let currentLesson;
+
+// Add these lines at the beginning of the file
+let userProgress = JSON.parse(localStorage.getItem('userProgress')) || {
+    lessons: {},
+    challenges: {}
+};
+
+function updateProgress(type, item) {
+    if (type === 'lesson') {
+        userProgress.lessons[item] = true;
+    } else if (type === 'challenge') {
+        userProgress.challenges[item] = true;
+    }
+    localStorage.setItem('userProgress', JSON.stringify(userProgress));
+    updateProgressBar();
+}
+
+function updateProgressBar() {
+    const lessonProgress = document.getElementById('lesson-progress');
+    const challengeProgress = document.getElementById('challenge-progress');
+    const lessonResetBtn = document.getElementById('lesson-reset-btn');
+    const challengeResetBtn = document.getElementById('challenge-reset-btn');
+    
+    if (lessonProgress) {
+        const completedLessons = Object.values(userProgress.lessons).filter(Boolean).length;
+        const totalLessons = document.querySelectorAll('.lesson-list li').length;
+        const lessonPercentage = (completedLessons / totalLessons) * 100;
+        lessonProgress.style.width = `${lessonPercentage}%`;
+        lessonProgress.textContent = `${Math.round(lessonPercentage)}%`;
+        
+        // Show reset button if there's any progress
+        if (lessonResetBtn) {
+            lessonResetBtn.style.display = completedLessons > 0 ? 'inline-block' : 'none';
+        }
+    }
+    
+    if (challengeProgress) {
+        const completedChallenges = Object.values(userProgress.challenges).filter(Boolean).length;
+        const totalChallenges = document.querySelectorAll('#challenge-list li').length;
+        const challengePercentage = (completedChallenges / totalChallenges) * 100;
+        challengeProgress.style.width = `${challengePercentage}%`;
+        challengeProgress.textContent = `${Math.round(challengePercentage)}%`;
+        
+        // Show reset button if there's any progress
+        if (challengeResetBtn) {
+            challengeResetBtn.style.display = completedChallenges > 0 ? 'inline-block' : 'none';
+        }
+    }
+}
+
+// Add this function to your script.js file
+function resetProgress(type) {
+    if (type === 'lesson') {
+        userProgress.lessons = {};
+    } else if (type === 'challenge') {
+        userProgress.challenges = {};
+    }
+    localStorage.setItem('userProgress', JSON.stringify(userProgress));
+    updateProgressBar();
+}
 
 async function initPyodide() {
     try {
@@ -14,6 +75,7 @@ async function initPyodide() {
 window.addEventListener('load', initPyodide);
 
 function showEditor(lesson) {
+    currentLesson = lesson;
     document.getElementById('editor-container').style.display = 'flex';
     if (!editor) {
         editor = ace.edit("editor");
@@ -128,6 +190,7 @@ if "name" in student:
 major = student.get("major", "No major specified")
 print("Student's major:", major)`, 1);
     }
+    updateProgress('lesson', lesson);
 }
 
 async function runCode() {
@@ -236,6 +299,7 @@ document.querySelectorAll('#challenge-list a').forEach(link => {
 function viewChallenge(challenge) {
     console.log("View Challenge:", challenge);
     // Additional logic for viewing the challenge can go here
+    updateProgress('challenge', challenge);
 }
 
 // Initial theme setting
@@ -413,6 +477,7 @@ function viewChallenge(challengeName) {
         default:
             description.innerHTML = `<p>Select a challenge to view its description.</p>`;
     }
+    updateProgress('challenge', challengeName);
 }
 
 // FAQ Accordion
@@ -431,4 +496,48 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    updateProgressBar();
 });
+
+
+// Reset button 
+document.getElementById('reset-code').addEventListener('click', () => {
+    if (currentLesson) {
+        showEditor(currentLesson); 
+    } 
+});
+
+
+document.getElementById('copy-code').addEventListener('click', () => {
+    const code = editor.getValue();
+    navigator.clipboard.writeText(code)
+        .then(() => {
+            const copyMessage = document.getElementById('copy-message');
+            copyMessage.style.display = 'block'; 
+            setTimeout(() => {
+                copyMessage.style.display = 'none'; 
+            }, 1000); 
+        })
+        .catch(err => {
+            console.error("Failed to copy text: ", err);
+        });
+});
+
+// Add this to your DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', () => {
+    // ... existing code ...
+
+    const lessonResetBtn = document.getElementById('lesson-reset-btn');
+    const challengeResetBtn = document.getElementById('challenge-reset-btn');
+
+    if (lessonResetBtn) {
+        lessonResetBtn.addEventListener('click', () => resetProgress('lesson'));
+    }
+
+    if (challengeResetBtn) {
+        challengeResetBtn.addEventListener('click', () => resetProgress('challenge'));
+    }
+
+    updateProgressBar();
+});
+
