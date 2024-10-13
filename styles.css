@@ -517,3 +517,8 @@ body.dark-theme .challenge-description {
     background-color: #292929; /* Dark background for challenge descriptions */
     color: #e0e0e0; /* Light text for challenge descriptions */
 }
+
+
+a.clicked {
+    color: red; 
+}
