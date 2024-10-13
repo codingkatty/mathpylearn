@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math 4 Python - Learn</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hamburger_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="Untitled design1.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
@@ -14,16 +15,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body id="learn" onload="showEditor('Untitled')">
+
     
         <div class="navbar"> 
-        <a class="logo" href="index.html"><img src="logonew.svg" height="40" width="40" alt="Math 4 Python Logo"></a>
+        
         <h1 class="title">MathPyLearn</h1>
+
+    <div class="navbar">
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Hamburger Menu for Desktop -->
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="learn.html" class="active">Learn</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="faq.html">FAQs</a>
+        </div>
+
         <div class="theme-toggle-wrapper">
             <button style="cursor: pointer;" id="theme-toggle">
                 <i class="fas fa-sun"></i>
                 <i class="fas fa-moon"></i>
             </button>
         </div>
+
 
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -38,9 +59,17 @@
     </div>
 
      <div class="content">
+
+        <a class="logo" href="index.html"><img src="logonew.svg" height="40" width="40" alt="Math 4 Python Logo"></a>
+    </div>
+    <div class="content">
+
         <h2>Python Lessons</h2>
         <p>Welcome to the Python lessons! Choose a lesson below to get started.</p>
-        
+        <div id="question-container">
+            <button id="generate-question-button" onclick="generateQuestion()">Click For Practice Question</button>
+            <p id="random-question"></p>
+        </div>
         <div class="learn-container">
             <div class="lesson-list">
                 <ul>
@@ -49,13 +78,28 @@
                     <li><a href="#" onclick="showEditor('Conditionals')">Conditionals</a></li>
                     <li><a href="#" onclick="showEditor('Loops')">Loops</a></li>
                     <li><a href="#" onclick="showEditor('Functions')">Functions</a></li>
-                    <li><a href="#" onclick="showEditor('Sets')">Sets</a></li> <!-- New Lesson -->
+                    <li><a href="#" onclick="showEditor('Sets')">Sets</a></li>
                     <li><a href="#" onclick="showEditor('Dictionary')">Dictionary</a></li>
                 </ul>
+              
             </div>
+            <!-- Random quetion  -->
+         
+            
             <div class="editor-area">
+                
                 <div id="editor-container">
+
+                    <div id="editor-controls">
+                        <button id="reset-code">Reset Code</button>
+                        <button id="copy-code">Copy Code</button>
+                        <p id="copy-message" style="display: none; color: black;">Copied!</p>                  
+                    </div>  
+
+                    <h2>Code Input :</h2>
+
                     <div id="editor"></div>
+                    <h2>Output :</h2>
                     <div id="terminal-container">
                         <div id="terminal"></div>
                     </div>
@@ -63,11 +107,21 @@
                 <div id="button-container">
                     <button id="run-button" onclick="runCode()">Run Code</button>
                     <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button>
+                    <button id="copy-button" onclick="copyCode()">Copy Code</button>
+                    <button id="reset-button" onclick="resetEditor()">Reset Code</button>
                 </div>
             </div>
         </div>
+        
+        <!-- Add this right after the <h2>Python Lessons</h2> line -->
+        <div class="progress-container">
+            <h3>Lesson Progress</h3>
+            <div class="progress-bar">
+                <div id="lesson-progress" class="progress"></div>
+            </div>
+            <button id="lesson-reset-btn" class="reset-btn">Reset Progress</button>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

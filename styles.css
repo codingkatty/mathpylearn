@@ -497,6 +497,66 @@ body.dark-theme .accordion.active {
     background-color: #34495e;
 }
 
+/* About Page Style */
+.about-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.about-h1, .about-h2 {
+    text-align: center;
+    color: #2C3E50;
+}
+.about-p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.about-link {
+    color: #3498DB;
+    text-decoration: none;
+}
+.about-link:hover {
+    text-decoration: underline;
+}
+.banner h1 {
+    margin: 0;
+    font-size: 2em;
+}
+.about-section {
+    margin: 20px 0;
+} 
+body.dark-theme .about-container {
+    background-color: #0f3460;
+}
+
+#editor-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+#editor-controls button {
+    padding: 0.8rem 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #2ecc71;
+}
+
+#copy-message {
+    margin-left: 10px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    color: green; 
+}
+
 /* Responsive design for challenge and FAQ pages */
 @media (max-width: 768px) {
     .challenge-container {
@@ -508,3 +568,115 @@ body.dark-theme .accordion.active {
         width: 100%;
     }
 }
+
+/*  */
+
+#button-container button {
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#button-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#button-container button:active {
+    background-color: #003f7f;
+    transform: scale(0.95);
+}
+
+#button-container button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+#question-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#generate-question-button {
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#generate-question-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#random-question {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    margin-bottom: 2rem;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 20px;
+    background-color: #3498db;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    transition: width 0.5s ease-in-out;
+}
+
+body.dark-theme .progress-bar {
+    background-color: #2c3e50;
+}
+
+body.dark-theme .progress {
+    background-color: #e94560;
+}
+
+
+.reset-btn {
+    display: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #c0392b;
+}
+
+body.dark-theme .reset-btn {
+    background-color: #e94560;
+}
+
+body.dark-theme .reset-btn:hover {
+    background-color: #d63649;
+}
+
