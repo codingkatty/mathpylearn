@@ -151,6 +151,27 @@ function updateThemeIcon() {
     }
 }
 
+
+// Challenge color
+
+// script.js
+document.querySelectorAll('#challenge-list a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default behavior
+
+        // Remove the 'clicked' class from all links
+        document.querySelectorAll('#challenge-list a').forEach(link => link.classList.remove('clicked'));
+
+        // Add the 'clicked' class to the clicked link
+        this.classList.add('clicked');
+    });
+});
+
+function viewChallenge(challenge) {
+    console.log("View Challenge:", challenge);
+    // Additional logic for viewing the challenge can go here
+}
+
 // Initial theme setting
 document.addEventListener('DOMContentLoaded', () => {
     updateThemeIcon();
