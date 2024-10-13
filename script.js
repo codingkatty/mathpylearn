@@ -87,6 +87,47 @@ print("Union of sets:", union_set)
 intersection_set = my_set.intersection(another_set)
 print("Intersection of sets:", intersection_set)`, 1);
     }
+    else if (lesson === 'Dictionary') {
+    editor.setValue(`\
+# Lesson: Dictionaries in Python
+# Dictionaries store key-value pairs.
+# Keys must be unique and can be of different data types.
+            
+# Creating a dictionary
+student = {
+    "name": "Alice",
+    "age": 22,
+    "major": "Computer Science"
+}
+            
+# Accessing dictionary values using keys
+print("Student's name:", student["name"])
+print("Student's age:", student["age"])
+            
+# Adding a new key-value pair
+student["grade"] = "A"
+print("Updated student dictionary:", student)
+            
+# Modifying an existing value
+student["age"] = 23
+print("After modifying age:", student)
+            
+# Removing a key-value pair
+del student["major"]
+print("After removing major:", student)
+            
+# Looping through dictionary keys and values
+for key, value in student.items():
+    print(f"{key}: {value}")
+            
+# Checking if a key exists
+if "name" in student:
+    print("The student's name is:", student["name"])
+            
+# Using the get() method to access values safely
+major = student.get("major", "No major specified")
+print("Student's major:", major)`, 1);
+    }
 }
 
 async function runCode() {
@@ -160,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function viewChallenge(challengeName) {
     const description = document.getElementById('challenge-description');
-    
+
     switch (challengeName) {
         case 'Basic Math Challenge':
             description.innerHTML = `\
@@ -184,7 +225,7 @@ function viewChallenge(challengeName) {
                 </ul>
             `;
             break;
-            case 'String Manipulation':
+        case 'String Manipulation':
             description.innerHTML = `
                 <h4>String Manipulation Challenge</h4>
                 <p>Put your string handling skills to the test! This challenge will assess your ability to manipulate and transform strings using various operations:</p>
@@ -195,7 +236,7 @@ function viewChallenge(challengeName) {
                 </ul>
             `;
             break;
-            case 'File Handling Challenge':
+        case 'File Handling Challenge':
             description.innerHTML = `
                 <h4>File Handling Challenge</h4>
                 <p>Put your file handling skills to the test! This challenge will assess your ability to read from and write to files, as well as manipulate their contents.:</p>
