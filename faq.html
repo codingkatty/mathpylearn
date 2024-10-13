@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+    <link rel="shortcut icon" href="Untitled design1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="learn.html" >Learn</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="faq.html" class="active">FAQs</a>
+        </div>
+        <div class="theme-toggle-wrapper">
+            <button style="cursor: pointer;" id="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+
+        <a class="logo" href="index.html"><img src="logonew.svg" height="40" width="40" alt="Math 4 Python Logo"></a>
+
+        <!-- <a href="learn.html" class="active">Learn</a>
+        <a href="challenge.html">Challenge</a> -->
+    </div>
+    <div class="wrapper">
+      <h1>Frequently Asked Questions - Math 4 Python</h1>
+
+      <div class="faq">
+        <button class="accordion">
+          What is Math 4 Python?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Math 4 Python is an interactive learning platform designed to teach
+            Python programming with a focus on mathematical concepts. You’ll get
+            to solve real-world math problems using Python and build a strong
+            foundation in both subjects.
+          </p>
+        </div>
+      </div>
+
+      
+
+      <div class="faq">
+        <button class="accordion">
+          What do I need to get started?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            You don’t need any prior programming experience! All you need is an
+            internet connection, a browser, and a willingness to learn. The
+            platform provides an interactive coding environment, so no software
+            installation is required.
+          </p>
+        </div>
+      </div>
+
+      
+
+      <div class="faq">
+        <button class="accordion">
+          What type of math problems will I solve?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            You'll tackle a range of mathematical problems, including algebra,
+            geometry, calculus, and statistics. The focus is on applying Python
+            to solve problems in a practical, real-world context.
+          </p>
+        </div>
+      </div>
+
+
+      
+
+      <div class="faq">
+        <button class="accordion">
+          Do I need to pay for access?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Math 4 Python offers both free  plans. You can access
+            many lessons for free.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+            How does real-time feedback work?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+            <p>Our platform provides real-time feedback on the code you submit. This allows you to instantly see your progress and understand any mistakes, helping you improve more efficiently.</p>
+         
+        </div>
+      </div>
+
+      
+      </div>
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.style.display === "block") {
+            pannel.style.display = "none";
+          } else {
+            pannel.style.display = "block";
+          }
+        });
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
