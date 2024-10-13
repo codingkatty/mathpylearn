@@ -26,17 +26,15 @@
                 <i class="fas fa-moon"></i>
             </button>
         </div>
-
         <a class="logo" href="index.html"><img src="logonew.svg" height="40" width="40" alt="Math 4 Python Logo"></a>
-
-        <!-- <a href="learn.html" class="active">Learn</a>
-        <a href="challenge.html">Challenge</a> -->
     </div>
-
     <div class="content">
         <h2>Python Lessons</h2>
         <p>Welcome to the Python lessons! Choose a lesson below to get started.</p>
-        
+        <div id="question-container">
+            <button id="generate-question-button" onclick="generateQuestion()">Click For Practice Question</button>
+            <p id="random-question"></p>
+        </div>
         <div class="learn-container">
             <div class="lesson-list">
                 <ul>
@@ -45,10 +43,14 @@
                     <li><a href="#" onclick="showEditor('Conditionals')">Conditionals</a></li>
                     <li><a href="#" onclick="showEditor('Loops')">Loops</a></li>
                     <li><a href="#" onclick="showEditor('Functions')">Functions</a></li>
-                    <li><a href="#" onclick="showEditor('Sets')">Sets</a></li> <!-- New Lesson -->
+                    <li><a href="#" onclick="showEditor('Sets')">Sets</a></li>
                     <li><a href="#" onclick="showEditor('Dictionary')">Dictionary</a></li>
                 </ul>
+              
             </div>
+            <!-- Random quetion  -->
+         
+            
             <div class="editor-area">
                 
                 <div id="editor-container">
@@ -70,6 +72,8 @@
                 <div id="button-container">
                     <button id="run-button" onclick="runCode()">Run Code</button>
                     <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button>
+                    <button id="copy-button" onclick="copyCode()">Copy Code</button>
+                    <button id="reset-button" onclick="resetEditor()">Reset Code</button>
                 </div>
             </div>
         </div>
@@ -83,7 +87,6 @@
             <button id="lesson-reset-btn" class="reset-btn">Reset Progress</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
