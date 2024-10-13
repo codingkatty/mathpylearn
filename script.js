@@ -181,7 +181,7 @@ function updateThemeIcon() {
     const sunIcon = themeToggle.querySelector('.fa-sun');
     const moonIcon = themeToggle.querySelector('.fa-moon');
 
-    if (document.body.classList.contains('dark-theme')) {
+    if (getTheme() === 'dark') {
         themeToggle.title = 'Switch to light theme';
         sunIcon.style.display = 'inline-block';
         moonIcon.style.display = 'none';
@@ -192,6 +192,31 @@ function updateThemeIcon() {
     }
 }
 
+// Add these functions at the beginning of your script.js file
+
+function setTheme(theme) {
+    localStorage.setItem('theme', theme);
+    document.body.classList.toggle('dark-theme', theme === 'dark');
+    updateThemeIcon();
+}
+
+function getTheme() {
+    return localStorage.getItem('theme') || 'light';
+}
+
+// Modify the existing theme toggle event listener
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const newTheme = getTheme() === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+    }
+
+    // Apply the stored theme when the page loads
+    setTheme(getTheme());
+});
 
 // Challenge color
 
@@ -368,3 +393,21 @@ function viewChallenge(challengeName) {
             description.innerHTML = `<p>Select a challenge to view its description.</p>`;
     }
 }
+
+// FAQ Accordion
+document.addEventListener('DOMContentLoaded', function() {
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+});

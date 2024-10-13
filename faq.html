@@ -4,19 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frequently Asked Questions</title>
+    <title>Math 4 Python - FAQs</title>
     <link rel="shortcut icon" href="Untitled design1.ico" type="image/x-icon">
-    <link rel="stylesheet" href="faq.css" />
     <link rel="stylesheet" href="styles.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body id="faq">
     <div class="navbar">
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -26,118 +20,120 @@
             <a href="faq.html" class="active">FAQs</a>
         </div>
         <div class="theme-toggle-wrapper">
-            <button style="cursor: pointer;" id="theme-toggle">
+            <button id="theme-toggle">
                 <i class="fas fa-sun"></i>
                 <i class="fas fa-moon"></i>
             </button>
         </div>
-
         <a class="logo" href="index.html"><img src="logonew.svg" height="40" width="40" alt="Math 4 Python Logo"></a>
-
-        <!-- <a href="learn.html" class="active">Learn</a>
-        <a href="challenge.html">Challenge</a> -->
-    </div>
-    <div class="wrapper">
-      <h1>Frequently Asked Questions - Math 4 Python</h1>
-
-      <div class="faq">
-        <button class="accordion">
-          What is Math 4 Python?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            Math 4 Python is an interactive learning platform designed to teach
-            Python programming with a focus on mathematical concepts. You’ll get
-            to solve real-world math problems using Python and build a strong
-            foundation in both subjects.
-          </p>
-        </div>
-      </div>
-
-      
-
-      <div class="faq">
-        <button class="accordion">
-          What do I need to get started?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            You don’t need any prior programming experience! All you need is an
-            internet connection, a browser, and a willingness to learn. The
-            platform provides an interactive coding environment, so no software
-            installation is required.
-          </p>
-        </div>
-      </div>
-
-      
-
-      <div class="faq">
-        <button class="accordion">
-          What type of math problems will I solve?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            You'll tackle a range of mathematical problems, including algebra,
-            geometry, calculus, and statistics. The focus is on applying Python
-            to solve problems in a practical, real-world context.
-          </p>
-        </div>
-      </div>
-
-
-      
-
-      <div class="faq">
-        <button class="accordion">
-          Do I need to pay for access?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            Math 4 Python offers both free  plans. You can access
-            many lessons for free.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq">
-        <button class="accordion">
-            How does real-time feedback work?
-            <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-            <p>Our platform provides real-time feedback on the code you submit. This allows you to instantly see your progress and understand any mistakes, helping you improve more efficiently.</p>
-         
-        </div>
-      </div>
-
-      
-      </div>
     </div>
 
-    <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
+    <div class="content">
+        <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="accordion">
+                    What is Math 4 Python?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>Math 4 Python is an interactive learning platform designed to teach Python programming with a focus on mathematical concepts. You'll get to solve real-world math problems using Python and build a strong foundation in both subjects.</p>
+                </div>
+            </div>
 
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          this.parentElement.classList.toggle("active");
+            <div class="faq-item">
+                <button class="accordion">
+                    What do I need to get started?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>You don't need any prior programming experience! All you need is an internet connection, a browser, and a willingness to learn. The platform provides an interactive coding environment, so no software installation is required.</p>
+                </div>
+            </div>
 
-          var pannel = this.nextElementSibling;
+            <div class="faq-item">
+                <button class="accordion">
+                    Is Math 4 Python suitable for beginners?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>Absolutely! Our platform is designed to cater to beginners as well as those with some programming experience. We start with the basics and gradually progress to more advanced topics, ensuring a smooth learning curve for all users.</p>
+                </div>
+            </div>
 
-          if (pannel.style.display === "block") {
-            pannel.style.display = "none";
-          } else {
-            pannel.style.display = "block";
-          }
-        });
-      }
-    </script>
+            <div class="faq-item">
+                <button class="accordion">
+                    How does the interactive coding environment work?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>Our platform features an in-browser Python interpreter. You can write and execute Python code directly in your web browser without the need for any local installations. This allows for immediate feedback and a seamless learning experience.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="accordion">
+                    Can I save my progress and return to it later?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>Currently, we don't have a built-in progress saving feature. However, we recommend keeping notes of the lessons you've completed and any code you've written. We're working on implementing a user account system in the future to allow progress tracking.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="accordion">
+                    What types of math concepts are covered?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>We cover a wide range of mathematical concepts, including basic arithmetic, algebra, geometry, trigonometry, calculus, and statistics. Each concept is introduced alongside relevant Python programming techniques, allowing you to see the practical applications of math in coding.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="accordion">
+                    How often is new content added?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>We strive to add new lessons and challenges regularly. Our team is constantly working on developing new content to keep the learning experience fresh and engaging. We recommend checking back often or following our social media channels for updates on new content.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="accordion">
+                    Is there a community forum for discussion and help?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>While we don't currently have a built-in forum, we encourage users to join our community on platforms like Discord or Reddit. These spaces are great for discussing problems, sharing solutions, and connecting with other learners. Links to these communities can be found on our homepage.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="accordion">
+                    Can I use Math 4 Python for school or university coursework?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>Absolutely! Math 4 Python is an excellent resource for supplementing your school or university coursework. While it shouldn't replace your formal education, it can provide additional practice, alternative explanations, and practical applications of the concepts you're learning in class.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="accordion">
+                    Is there a mobile app for Math 4 Python?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>Currently, Math 4 Python is a web-based platform optimized for desktop and mobile browsers. We don't have a dedicated mobile app at the moment, but our website is responsive and works well on mobile devices. We're considering developing a mobile app in the future based on user demand.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <script src="script.js"></script>
-  </body>
+  </body>
 </html>
