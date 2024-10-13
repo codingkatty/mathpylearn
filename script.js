@@ -160,6 +160,28 @@ function viewChallenge(challengeName) {
                 </ul>
             `;
             break;
+            case 'String Manipulation':
+            description.innerHTML = `
+                <h4>String Manipulation Challenge</h4>
+                <p>Put your string handling skills to the test! This challenge will assess your ability to manipulate and transform strings using various operations:</p>
+                <ul>
+                    <li>Reverse a given string and provide the result</li>
+                    <li>Check if a string is a palindrome.</li>
+                    <li>Convert the entire string to uppercase or lowercase.</li>
+                </ul>
+            `;
+            break;
+            case 'File Handling Challenge':
+            description.innerHTML = `
+                <h4>File Handling Challenge</h4>
+                <p>Put your file handling skills to the test! This challenge will assess your ability to read from and write to files, as well as manipulate their contents.:</p>
+                <ul>
+                    <li>Count the number of lines in a given text file.</li>
+                    <li>Search for a specific word in a file and display the line numbers where it appears</li>
+                    <li>Create a new file and write a list of strings into it, each on a new line.</li>
+                </ul>
+            `;
+            break;
         case 'Data Structures Challenge':
             description.innerHTML = `
                 <h4>Data Structures Challenge</h4>
@@ -168,6 +190,33 @@ function viewChallenge(challengeName) {
                     <li>Implement a stack using an array.</li>
                     <li>Write a function to reverse a linked list.</li>
                 </ul>
+            `;
+            break;
+        case 'Dynamic Pogramming Challenge':
+            description.innerHTML = `
+                <h4>Dynamic Programming Challenge</h4>
+<p>Put your dynamic programming skills to the test!. Tackle the tasks below:</p>
+<ul>
+    <li>Implement a function to calculate the nth Fibonacci number using dynamic programming.</li>
+    <li>Solve the Knapsack problem: given a set of items, determine the maximum value that can be carried in a knapsack of a given capacity.</li>
+    <li>Write a function to find the length of the longest common subsequence between two strings.</li>
+    
+    
+</ul>
+<p>Are you ready to take on the challenge? Let’s see how well you can apply dynamic programming to solve these problems!</p>
+
+            `;
+            break;
+        case 'Object-Oriented Programming':
+            description.innerHTML = `
+              <h4>Object-Oriented Programming Challenge</h4>
+<p>Test your object-oriented programming skills! This challenge will evaluate your ability to design and implement classes and objects. Take on the tasks below:</p>
+<ul>
+    <li>Design a bank account class with methods for deposit, withdrawal, and balance inquiry.</li>
+    <li>Create a class hierarchy for vehicles (Car, Truck, Motorcycle) inheriting from a base Vehicle class.</li>
+    <li>Implement a library management system with classes for books, patrons, and loans.</li>
+    
+</ul>
             `;
             break;
         default:
