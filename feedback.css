@@ -1,0 +1,146 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f3f4f7 0%, #d7e2f2 100%);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Feedback form container */
+.feedback-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-size: 26px;
+    color: #34495e;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    margin: 10px 0 5px;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #f7f9fc;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #2980b9;
+}
+
+/* Textarea specifics */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    width: 100%;
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #1f618d;
+    transform: scale(1);
+}
+
+/* Response message */
+.response-message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2ecc71;
+}
+
+.error {
+    color: #e74c3c;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .feedback-container {
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+/* Subtle Background Pattern */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.1;
+    z-index: -1;
+}
