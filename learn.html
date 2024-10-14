@@ -13,6 +13,8 @@
             <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+
 </head>
 <body id="learn" onload="showEditor('Untitled')">
 
@@ -158,7 +160,26 @@
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
     </footer>
+    <button onclick="topFunction()" id="nav-top"><i class = "material-icons">arrow_upward</i>  </button>
 
     <script src="script.js"></script>
+    <script>
+        let mybutton = document.getElementById("nav-top");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+                }
+        }
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
 </body>
 </html>
