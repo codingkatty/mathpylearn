@@ -190,6 +190,114 @@ if "name" in student:
 major = student.get("major", "No major specified")
 print("Student's major:", major)`, 1);
     }
+    else if (lesson === 'Lists') {
+        editor.setValue(`\
+# 1. Creating a list with integers
+my_list = [1, 2, 3, 4, 5]
+
+# Creating a list with mixed data types
+mixed_list = [1, "hello", 3.14, True]
+
+# Creating an empty list
+empty_list = []
+
+# 2. Accessing the first element
+first_element = my_list[0]
+print("First Element", first_element)  # Output: 1
+
+# Accessing the last element
+last_element = my_list[-1]
+print("Last Element", last_element)  # Output: 5
+
+# 3. Lists are mutable, so you can change the value of elements.
+# Modifying the second element
+my_list[1] = 20
+print("After modifying the second element:", my_list)  # Output: [1, 20, 3, 4, 5]
+
+# 4. Basic Operations
+# 4.1 Appending an element
+my_list.append(100)
+print("Appending 100:", my_list)  # Output: [1, 20, 3, 4, 5, 100]
+
+# 4.2 Inserting an element at a specific position
+my_list.insert(1, 6)
+print("Inserting 6 at position 1:", my_list)  # Output: [1, 6, 20, 3, 4, 5, 100]
+
+# 4.3 Removing a specific element by value
+my_list.remove(3)
+print("Removing 3:", my_list)  # Output: [1, 6, 20, 4, 5, 100]
+
+# 4.4 Removing an element by index
+my_list.pop(1)
+print("Removing element at index 1:", my_list)  # Output: [1, 20, 4, 5, 100]
+
+# 4.5 Removing the last element
+my_list.pop()
+print("Removing the last element:", my_list)  # Output: [1, 20, 4, 5]`, 1);
+        }
+        else if (lesson === 'Tuples') { 
+        editor.setValue(`\
+# 1. Creating Tuples
+# Creating a tuple with integers
+my_tuple = (1, 2, 3, 4, 5)
+
+# Creating a tuple with mixed data types
+mixed_tuple = (1, "hello", 3.14, True)
+
+# Creating a tuple with a single item (note the comma)
+single_item_tuple = (10,)
+
+# Creating an empty tuple
+empty_tuple = ()
+
+# 2. Accessing elements
+my_tuple = (10, 20, 30, 40, 50)
+
+# Accessing the first element
+first_element = my_tuple[0]
+print("First Element:", first_element)  # Output: 10
+
+# Accessing the last element
+last_element = my_tuple[-1]
+print("Last Element:", last_element)  # Output: 50
+
+# 3. Tuples are immutable
+my_tuple = (1, 2, 3)
+
+# Trying to modify an element (this will raise an error)
+# my_tuple[1] = 100  # Uncommenting this line will cause a TypeError
+
+
+# 4. Basic Operations
+# 4.1 Concatenating two tuples
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+result_tuple = tuple1 + tuple2
+print("Concatenation of tuple1 and tuple2:", result_tuple)  # Output: (1, 2, 3, 4, 5, 6)
+
+# 4.2 Repeating the tuple
+my_tuple = (1, 2, 3)
+repeated_tuple = my_tuple * 3
+print("Repeated Tuple", repeated_tuple)  # Output: (1, 2, 3, 1, 2, 3, 1, 2, 3)
+
+# 4.3 Slicing
+# Slicing the first 3 elements
+my_tuple = (10, 20, 30, 40, 50, 60)
+print("Slicing", my_tuple[:3])  # Output: (10, 20, 30)
+
+# Slicing from the third element to the end
+print(my_tuple[2:])  # Output: (30, 40, 50, 60)
+
+# Slicing a range of elements
+print(my_tuple[1:4])  # Output: (20, 30, 40)
+
+# 4.4 Unpacking the tuple
+my_tuple = (10, 20, 30)
+a, b, c = my_tuple
+print("Unpacking", a)  # Output: 10
+print(b)  # Output: 20
+print(c)  # Output: 30`, 1);
+        }
     updateProgress('lesson', lesson);
 }
 
