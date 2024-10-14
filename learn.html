@@ -10,68 +10,58 @@
     <link rel="shortcut icon" href="Untitled design1.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
-            <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        
+    </style>
 
 </head>
 <body id="learn" onload="showEditor('Untitled')">
 
-    
-        <div class="navbar"> 
-        
-        <h1 class="title">MathPyLearn</h1>
-
     <div class="navbar">
-        <!-- Hamburger Menu for Mobile -->
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <h1 class="title">MathPyLearn</h1>
+        <div class="navbar">
+            <!-- Hamburger Menu for Mobile -->
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
 
-        <!-- Hamburger Menu for Desktop -->
-        <div class="nav-links" id="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="learn.html" class="active">Learn</a>
-            <a href="challenge.html">Challenge</a>
-            <a href="faq.html">FAQs</a>
-        </div>
+            <!-- Navbar Links -->
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="learn.html" class="active">Learn</a>
+                <a href="challenge.html">Challenge</a>
+                <a href="faq.html">FAQs</a>
+            </div>
 
-        <div class="theme-toggle-wrapper">
-            <button style="cursor: pointer;" id="theme-toggle">
-                <i class="fas fa-sun"></i>
-                <i class="fas fa-moon"></i>
-            </button>
+            <!-- Theme Toggle -->
+            <div class="theme-toggle-wrapper">
+                <button style="cursor: pointer;" id="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
-
-
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="learn.html" class="active">Learn</a>
-            <a href="challenge.html">Challenge</a>
-            <a href="faq.html">FAQs</a>
-        </div>
-        
-        <!-- <a href="learn.html" class="active">Learn</a>
-        <a href="challenge.html">Challenge</a> -->
     </div>
 
-     <div class="content">
-
+    <div class="content">
         <a class="logo" href="index.html"><img src="logonew.svg" height="40" width="40" alt="Math 4 Python Logo"></a>
     </div>
+    
     <div class="content">
-
         <h2>Python Lessons</h2>
         <p>Welcome to the Python lessons! Choose a lesson below to get started.</p>
         <div id="question-container">
             <button id="generate-question-button" onclick="generateQuestion()">Click For Practice Question</button>
             <p id="random-question"></p>
         </div>
+        
         <div class="learn-container">
             <div class="lesson-list">
                 <ul>
@@ -85,15 +75,10 @@
                     <li><a href="#" onclick="showEditor('Sets')">Sets</a></li>
                     <li><a href="#" onclick="showEditor('Dictionary')">Dictionary</a></li>
                 </ul>
-              
             </div>
-            <!-- Random quetion  -->
-         
-            
-            <div class="editor-area">
-                
-                <div id="editor-container">
 
+            <div class="editor-area">
+                <div id="editor-container">
                     <div id="editor-controls">
                         <button id="reset-code">Reset Code</button>
                         <button id="copy-code">Copy Code</button>
@@ -101,13 +86,13 @@
                     </div>  
 
                     <h2>Code Input :</h2>
-
                     <div id="editor"></div>
                     <h2>Output :</h2>
                     <div id="terminal-container">
                         <div id="terminal"></div>
                     </div>
                 </div>
+                
                 <div id="button-container">
                     <button id="run-button" onclick="runCode()">Run Code</button>
                     <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button>
@@ -116,8 +101,7 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Add this right after the <h2>Python Lessons</h2> line -->
+
         <div class="progress-container">
             <h3>Lesson Progress</h3>
             <div class="progress-bar">
@@ -160,7 +144,7 @@
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
     </footer>
-    <button onclick="topFunction()" id="nav-top"><i class = "material-icons">arrow_upward</i>  </button>
+    <button onclick="topFunction()" id="nav-top"><i class="material-icons">arrow_upward</i></button>
 
     <script src="script.js"></script>
     <script>
@@ -168,12 +152,13 @@
         window.onscroll = function() {scrollFunction()};
 
         function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-                }
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
+
         function topFunction() {
             window.scrollTo({
                 top: 0,
