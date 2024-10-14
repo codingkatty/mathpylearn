@@ -15,3 +15,6 @@ function handleSubmit() {
     responseMessage.classList.remove('error');
     return false; // Prevents form submission for demo purposes
 }
+function goBack() {
+    window.location.href = "index.html"; // Redirect to index.html
+}
