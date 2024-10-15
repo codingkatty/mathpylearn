@@ -507,3 +507,127 @@ body.dark-theme .cta-button:hover {
   #nav-top:hover {
     background-color: #555; 
   }
+
+  /* challenge.css*/
+  /* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    font-family: 'Lobster', cursive;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #ffd700;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+}
+
+/* Content Area */
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.progress-container {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    width: 100%;
+    height: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #00cc66;
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+/* Challenge List */
+.challenge-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#challenge-list {
+    width: 45%;
+    list-style: none;
+    padding: 0;
+}
+
+#challenge-list li {
+    margin: 10px 0;
+}
+
+#challenge-list a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+#challenge-list a:hover {
+    color: #00cc66;
+}
+
+/* Challenge Description */
+.challenge-description {
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+

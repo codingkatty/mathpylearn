@@ -13,10 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body id="challenge">
+
     <div class="navbar">
         <h1 class="title">MathPyLearn</h1>
         <div class="theme-toggle-wrapper">
-            <button style="cursor: pointer;" id="theme-toggle">
+            <button id="theme-toggle" style="cursor: pointer;">
                 <i class="fas fa-sun"></i>
                 <i class="fas fa-moon"></i>
             </button>
@@ -35,6 +36,8 @@
             <div></div>
         </div>
     </div>
+
+    <!-- Main Content -->
     <div class="content">
         <h2><i class="fas fa-trophy"></i> Python Challenges</h2>
         <p>Welcome to the challenges section! Test your skills with various coding challenges.</p>
@@ -65,6 +68,8 @@
             </section>
         </div>
     </div>
+
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
@@ -95,8 +100,14 @@
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
     </footer>
+
+
+    <!-- Scroll to Top Button -->
     <button onclick="topFunction()" id="nav-top"><i class="material-icons">arrow_upward</i></button>
+
+    <!-- External JavaScript -->
     <script src="script.js"></script>
+
     <script>
         let mybutton = document.getElementById("nav-top");
         window.onscroll = function() {scrollFunction()};
@@ -114,5 +125,6 @@
             });
         }
     </script>
+
 </body>
 </html>
