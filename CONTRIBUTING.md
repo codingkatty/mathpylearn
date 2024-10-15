@@ -4,7 +4,6 @@ Thank you for considering contributing to [mathpylearn]! We appreciate your inte
 
 ## Table of Contents
 
-- [Contributing to \[mathpylearn\]](#contributing-to-WorkVed-)
   - [Table of Contents](#table-of-contents)
   - [Code of Conduct](#code-of-conduct)
   - [How Can I Contribute?](#how-can-i-contribute)
@@ -98,6 +97,7 @@ If you want to contribute code changes, follow these steps:
 9. **Wait for Review**:
     Your pull request will now be available for review by the project maintainers. They may provide feedback or ask for changes before merging your pull request into the main branch of the repository.
 
+
 ### Pull Request Guidelines 📋
 
 To ensure a smooth review process, please follow these guidelines when submitting a pull request:
@@ -108,9 +108,6 @@ To ensure a smooth review process, please follow these guidelines when submittin
 - Keep your pull request focused on a single feature or bug fix.
 - Provide a clear and concise title and description for your pull request.
 
-## Style Guide 📚
-
-[WorkVed] follows a specific coding style and structure. Please refer to the [style guide](STYLE_GUIDE.md) for details on code formatting, naming conventions, and other coding standards.
 
 ## License 📜
 
