@@ -14,7 +14,6 @@
 </head>
 <body id="challenge">
 
-    <!-- Navigation Bar -->
     <div class="navbar">
         <h1 class="title">MathPyLearn</h1>
         <div class="theme-toggle-wrapper">
@@ -30,6 +29,7 @@
             <a href="challenge.html" class="active">Challenge</a>
             <a href="faq.html">FAQs</a>
         </div>
+        <!-- Hamburger Menu for Mobile -->
         <div class="hamburger" id="hamburger">
             <div></div>
             <div></div>
@@ -41,7 +41,6 @@
     <div class="content">
         <h2><i class="fas fa-trophy"></i> Python Challenges</h2>
         <p>Welcome to the challenges section! Test your skills with various coding challenges.</p>
-        
         <div class="progress-container">
             <h3>Challenge Progress</h3>
             <div class="progress-bar">
@@ -49,7 +48,6 @@
             </div>
             <button id="challenge-reset-btn" class="reset-btn">Reset Progress</button>
         </div>
-        
         <div class="challenge-container">
             <ul id="challenge-list">
                 <li><a href="#" onclick="viewChallenge('Basic Math Challenge')"><i class="fas fa-calculator"></i> Basic Math Challenge</a></li>
@@ -64,7 +62,6 @@
                 <li><a href="#" onclick="viewChallenge('Array')"><i class="fas fa-list-ol"></i> Array Challenge</a></li>
                 <li><a href="#" onclick="viewChallenge('Graph')"><i class="fas fa-project-diagram"></i> Graph Algorithm Challenge</a></li>
             </ul>
-
             <section class="challenge-description" id="challenge-description">
                 <h3>Challenge Description</h3>
                 <p>Select a challenge from the list to view its description and instructions.</p>
@@ -104,10 +101,30 @@
         </div>
     </footer>
 
+
     <!-- Scroll to Top Button -->
     <button onclick="topFunction()" id="nav-top"><i class="material-icons">arrow_upward</i></button>
 
     <!-- External JavaScript -->
     <script src="script.js"></script>
+
+    <script>
+        let mybutton = document.getElementById("nav-top");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+
 </body>
 </html>
