@@ -9,33 +9,19 @@
     <link rel="stylesheet" href="hamburger_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body id="challenge">
 
-    <div class="navbar"> 
-        
+    <div class="navbar">
         <h1 class="title">MathPyLearn</h1>
         <div class="theme-toggle-wrapper">
-            <button style="cursor: pointer;" id="theme-toggle">
+            <button id="theme-toggle" style="cursor: pointer;">
                 <i class="fas fa-sun"></i>
                 <i class="fas fa-moon"></i>
             </button>
         </div>
-
-        <div class="nav-links">
-
-    <div class="navbar">
-        <!-- Hamburger Menu for Mobile -->
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-
-        <!-- Hamburger Menu for Desktop -->
         <div class="nav-links" id="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -43,16 +29,18 @@
             <a href="challenge.html" class="active">Challenge</a>
             <a href="faq.html">FAQs</a>
         </div>
-        
-        <!-- <a href="learn.html" class="active">Learn</a>
-        <a href="challenge.html">Challenge</a> -->
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
 
-
+    <!-- Main Content -->
     <div class="content">
         <h2><i class="fas fa-trophy"></i> Python Challenges</h2>
         <p>Welcome to the challenges section! Test your skills with various coding challenges.</p>
-        
         <div class="progress-container">
             <h3>Challenge Progress</h3>
             <div class="progress-bar">
@@ -60,7 +48,6 @@
             </div>
             <button id="challenge-reset-btn" class="reset-btn">Reset Progress</button>
         </div>
-        
         <div class="challenge-container">
             <ul id="challenge-list">
                 <li><a href="#" onclick="viewChallenge('Basic Math Challenge')"><i class="fas fa-calculator"></i> Basic Math Challenge</a></li>
@@ -75,13 +62,14 @@
                 <li><a href="#" onclick="viewChallenge('Array')"><i class="fas fa-list-ol"></i> Array Challenge</a></li>
                 <li><a href="#" onclick="viewChallenge('Graph')"><i class="fas fa-project-diagram"></i> Graph Algorithm Challenge</a></li>
             </ul>
-
             <section class="challenge-description" id="challenge-description">
                 <h3>Challenge Description</h3>
                 <p>Select a challenge from the list to view its description and instructions.</p>
             </section>
         </div>
     </div>
+
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
@@ -90,7 +78,6 @@
                 <p><i class="fas fa-envelope"></i> contact@math4python.com</p>
                 <p><i class="fas fa-phone"></i> +123 456 7890</p>
             </div>
-    
             <div class="footer-section links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -101,7 +88,6 @@
                     <li><a href="faq.html">FAQs</a></li>
                 </ul>
             </div>
-    
             <div class="footer-section social">
                 <h3>Follow Us</h3>
                 <a href="#"><i class="fab fa-facebook"></i></a>
@@ -110,24 +96,27 @@
                 <a href="#"><i class="fab fa-github"></i></a>
             </div>
         </div>
-    
         <div class="footer-bottom">
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
     </footer>
-    <button onclick="topFunction()" id="nav-top"><i class = "material-icons">arrow_upward</i>  </button>
 
+
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="nav-top"><i class="material-icons">arrow_upward</i></button>
+
+    <!-- External JavaScript -->
     <script src="script.js"></script>
+
     <script>
         let mybutton = document.getElementById("nav-top");
         window.onscroll = function() {scrollFunction()};
-
         function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-                }
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
         function topFunction() {
             window.scrollTo({
@@ -136,6 +125,6 @@
             });
         }
     </script>
-    
+
 </body>
 </html>
