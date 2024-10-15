@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,68 +10,158 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="hamburger_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
-  </head>
-  <body id="faq">
+    <style>
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
 
-    <div class="navbar"> 
-        
-        <h1 class="title">MathPyLearn</h1>
-        <div class="theme-toggle-wrapper">
-            <button style="cursor: pointer;" id="theme-toggle">
-                <i class="fas fa-sun"></i>
-                <i class="fas fa-moon"></i>
-            </button>
-        </div>
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 20px;
+            flex-wrap: wrap;
+            /* Ensures wrapping on smaller screens */
+        }
 
-        <div class="nav-links">
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 250px;
+        }
 
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-section p,
+        .footer-section ul {
+            font-size: 1rem;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 5px 0;
+        }
+
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #222;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        .social a {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .social a:hover {
+            color: #007bff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-section {
+                margin-bottom: 20px;
+            }
+
+            .social a {
+                margin-right: 15px;
+            }
+        }
+
+        .footer-section h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body id="faq">
     <div class="navbar">
+        <h1 class="title">MathPyLearn</h1>
         <!-- Hamburger Menu for Mobile -->
         <div class="hamburger" id="hamburger">
             <div></div>
             <div></div>
             <div></div>
         </div>
-
-        <!-- Hamburger Menu for Desktop -->
+        <!-- Navbar Links -->
         <div class="nav-links" id="nav-links">
-
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="learn.html" >Learn</a>
+            <a href="learn.html">Learn</a>
             <a href="challenge.html">Challenge</a>
             <a href="faq.html" class="active">FAQs</a>
         </div>
-        
-        <!-- <a href="learn.html" class="active">Learn</a>
-        <a href="challenge.html">Challenge</a> -->
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-wrapper">
+            <button style="cursor: pointer;" id="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </div>
 
-
     <div class="content">
-        <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+        <h2><span class="fas fa-question-circle"></span> Frequently Asked Questions</h2>
         <div class="faq-container">
+            <!-- FAQ Items -->
             <div class="faq-item">
-                <button class="accordion">
+                <button class="accordion" aria-expanded="false">
                     What is Math 4 Python?
-                    <i class="fas fa-chevron-down"></i>
+                    <span class="fas fa-chevron-down"></span>
                 </button>
                 <div class="panel">
-                    <p>Math 4 Python is an interactive learning platform designed to teach Python programming with a focus on mathematical concepts. You'll get to solve real-world math problems using Python and build a strong foundation in both subjects.</p>
+                    <p>Math 4 Python is an interactive learning platform designed to teach Python programming with a
+                        focus on mathematical concepts. You'll get to solve real-world math problems using Python and
+                        build a strong foundation in both subjects.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="accordion">
+                <button class="accordion" aria-expanded="false">
                     What do I need to get started?
-                    <i class="fas fa-chevron-down"></i>
+                    <span class="fas fa-chevron-down"></span>
                 </button>
                 <div class="panel">
-                    <p>You don't need any prior programming experience! All you need is an internet connection, a browser, and a willingness to learn. The platform provides an interactive coding environment, so no software installation is required.</p>
+                    <p>You don't need any prior programming experience! All you need is an internet connection, a
+                        browser, and a willingness to learn. The platform provides an interactive coding environment, so
+                        no software installation is required.</p>
                 </div>
             </div>
 
@@ -80,7 +171,9 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="panel">
-                    <p>Absolutely! Our platform is designed to cater to beginners as well as those with some programming experience. We start with the basics and gradually progress to more advanced topics, ensuring a smooth learning curve for all users.</p>
+                    <p>Absolutely! Our platform is designed to cater to beginners as well as those with some programming
+                        experience. We start with the basics and gradually progress to more advanced topics, ensuring a
+                        smooth learning curve for all users.</p>
                 </div>
             </div>
 
@@ -90,7 +183,9 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="panel">
-                    <p>Our platform features an in-browser Python interpreter. You can write and execute Python code directly in your web browser without the need for any local installations. This allows for immediate feedback and a seamless learning experience.</p>
+                    <p>Our platform features an in-browser Python interpreter. You can write and execute Python code
+                        directly in your web browser without the need for any local installations. This allows for
+                        immediate feedback and a seamless learning experience.</p>
                 </div>
             </div>
 
@@ -100,7 +195,9 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="panel">
-                    <p>Currently, we don't have a built-in progress saving feature. However, we recommend keeping notes of the lessons you've completed and any code you've written. We're working on implementing a user account system in the future to allow progress tracking.</p>
+                    <p>Currently, we don't have a built-in progress saving feature. However, we recommend keeping notes
+                        of the lessons you've completed and any code you've written. We're working on implementing a
+                        user account system in the future to allow progress tracking.</p>
                 </div>
             </div>
 
@@ -110,7 +207,9 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="panel">
-                    <p>We cover a wide range of mathematical concepts, including basic arithmetic, algebra, geometry, trigonometry, calculus, and statistics. Each concept is introduced alongside relevant Python programming techniques, allowing you to see the practical applications of math in coding.</p>
+                    <p>We cover a wide range of mathematical concepts, including basic arithmetic, algebra, geometry,
+                        trigonometry, calculus, and statistics. Each concept is introduced alongside relevant Python
+                        programming techniques, allowing you to see the practical applications of math in coding.</p>
                 </div>
             </div>
 
@@ -120,7 +219,9 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="panel">
-                    <p>We strive to add new lessons and challenges regularly. Our team is constantly working on developing new content to keep the learning experience fresh and engaging. We recommend checking back often or following our social media channels for updates on new content.</p>
+                    <p>We strive to add new lessons and challenges regularly. Our team is constantly working on
+                        developing new content to keep the learning experience fresh and engaging. We recommend checking
+                        back often or following our social media channels for updates on new content.</p>
                 </div>
             </div>
 
@@ -130,7 +231,10 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="panel">
-                    <p>While we don't currently have a built-in forum, we encourage users to join our community on platforms like Discord or Reddit. These spaces are great for discussing problems, sharing solutions, and connecting with other learners. Links to these communities can be found on our homepage.</p>
+                    <p>While we don't currently have a built-in forum, we encourage users to join our community on
+                        platforms like Discord or Reddit. These spaces are great for discussing problems, sharing
+                        solutions, and connecting with other learners. Links to these communities can be found on our
+                        homepage.</p>
                 </div>
             </div>
 
@@ -140,7 +244,10 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="panel">
-                    <p>Absolutely! Math 4 Python is an excellent resource for supplementing your school or university coursework. While it shouldn't replace your formal education, it can provide additional practice, alternative explanations, and practical applications of the concepts you're learning in class.</p>
+                    <p>Absolutely! Math 4 Python is an excellent resource for supplementing your school or university
+                        coursework. While it shouldn't replace your formal education, it can provide additional
+                        practice, alternative explanations, and practical applications of the concepts you're learning
+                        in class.</p>
                 </div>
             </div>
 
@@ -150,21 +257,26 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="panel">
-                    <p>Currently, Math 4 Python is a web-based platform optimized for desktop and mobile browsers. We don't have a dedicated mobile app at the moment, but our website is responsive and works well on mobile devices. We're considering developing a mobile app in the future based on user demand.</p>
+                    <p>Currently, Math 4 Python is a web-based platform optimized for desktop and mobile browsers. We
+                        don't have a dedicated mobile app at the moment, but our website is responsive and works well on
+                        mobile devices. We're considering developing a mobile app in the future based on user demand.
+                    </p>
                 </div>
             </div>
 
         </div>
     </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
                 <h3>Math 4 Python</h3>
-                <p>Enhance your Python skills while solving math-focused challenges. Learn, code, and improve through interactive lessons with real-time feedback.</p>
-                <p><i class="fas fa-envelope"></i> contact@math4python.com</p>
-                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p>Enhance your Python skills while solving math-focused challenges. Learn, code, and improve through
+                    interactive lessons with real-time feedback.</p>
+                <p><span class="fas fa-envelope"></span> contact@math4python.com</p>
+                <p><span class="fas fa-phone"></span> +123 456 7890</p>
             </div>
-    
+
             <div class="footer-section links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -175,40 +287,39 @@
                     <li><a href="faq.html">FAQs</a></li>
                 </ul>
             </div>
-    
+
             <div class="footer-section social">
                 <h3>Follow Us</h3>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><span class="fab fa-facebook"></span></a>
+                <a href="#"><span class="fab fa-twitter"></span></a>
+                <a href="#"><span class="fab fa-linkedin"></span></a>
+                <a href="#"><span class="fab fa-github"></span></a>
             </div>
         </div>
-    
+
         <div class="footer-bottom">
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
     </footer>
-    <button onclick="topFunction()" id="nav-top"><i class = "material-icons">arrow_upward</i>  </button>
+
+
+    <button id="nav-top" aria-label="Scroll to top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
 
     <script src="script.js"></script>
     <script>
-        let mybutton = document.getElementById("nav-top");
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-                }
-        }
-        function topFunction() {
+        const mybutton = document.getElementById("nav-top");
+        window.onscroll = () => {
+            mybutton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+        };
+        const topFunction = () => {
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
-        }
+        };
     </script>
-  </body>
+</body>
+
 </html>
