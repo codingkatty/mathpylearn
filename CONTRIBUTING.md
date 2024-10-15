@@ -15,9 +15,6 @@ Thank you for considering contributing to [mathpylearn]! We appreciate your inte
   - [Style Guide](#style-guide-)
   - [License](#license-)
 
-## Code of Conduct
-
-This project and its community adhere to the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report any unacceptable behavior to [project owner's email].
 
 ## How Can I Contribute? 🌟
 
