@@ -40,7 +40,18 @@ body {
 .navbar a:hover {
     background-color: #007bff;
     color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(163, 165, 167, 0.2);
+}
+
+#icon1{
+    width:50%;
+    height:50%
+}
+#icon2,#icon3{
+    width:50%;
+    height:40%
+
+
 }
 
 .navbar a.active {
@@ -119,6 +130,10 @@ h2 {
 .feature:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Lift on hover */
+    #icon1,#icon2,#icon3{
+        cursor: pointer;
+        filter:drop-shadow(10px 10px 7px #9dc6f1);
+    }
 }
 
 .feature h3 {
