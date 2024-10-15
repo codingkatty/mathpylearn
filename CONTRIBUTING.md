@@ -4,14 +4,12 @@ Thank you for considering contributing to [mathpylearn]! We appreciate your inte
 
 ## Table of Contents
 
-  - [Table of Contents](#table-of-contents)
-  - [Code of Conduct](#code-of-conduct)
   - [How Can I Contribute?](#how-can-i-contribute)
     - [Reporting Bugs](#reporting-bugs-)
     - [Requesting Features](#requesting-features-)
     - [Submitting Changes](#submitting-changes-)
     - [Pull Request Guidelines](#pull-request-guidelines-)
-  - [Style Guide](#style-guide-)
+  
   - [License](#license-)
 
 
