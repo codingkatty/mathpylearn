@@ -1,6 +1,7 @@
 let editor;
 let pyodide;
 let currentLesson;
+let currentContentType; 
 
 // Add these lines at the beginning of the file
 let userProgress = JSON.parse(localStorage.getItem('userProgress')) || {
@@ -76,6 +77,7 @@ window.addEventListener('load', initPyodide);
 
 function showEditor(lesson) {
     currentLesson = lesson;
+    currentContentType = 'lesson';  // Set the content type to 'lesson'
     document.getElementById('editor-container').style.display = 'flex';
     if (!editor) {
         editor = ace.edit("editor");
@@ -425,11 +427,14 @@ const questions = [
     "Write a Python function to sort a list of numbers."
     // Add more questions as needed
 ];
-
 function generateQuestion() {
+    currentContentType = 'practice_question';
     const randomIndex = Math.floor(Math.random() * questions.length);
-    const randomQuestion = questions[randomIndex];
-    document.getElementById('random-question').innerText = randomQuestion;
+    currentContent = questions[randomIndex]; // Store the current question text
+    document.getElementById('random-question').innerText = currentContent;
+    if (editor) {
+        editor.setValue(`# Question: ${currentContent}\n\n# Write your Python code here:\n`, 1);
+    }
 }
 
 // Call this function on page load if you want to display a question initially
@@ -631,13 +636,25 @@ hamburger.addEventListener("click", () => {
     updateProgressBar();
 });
 
+//This function should check currentContentType to decide how to reset the editor.
+function resetEditor() {
+    // Check the type of content currently loaded
+    if (currentContentType === 'lesson') {
+        // If it's a lesson, reset to the original lesson content
+        showEditor(currentLesson);
+    } else if (currentContentType === 'practice_question') {
+        // If it's a practice question, clear the editor but keep the question visible
+        if (editor && currentContent) {
+            editor.setValue(`# Question: ${currentContent}\n\n# Write your Python code here:\n`, 1);
+        }
+    }
+}
 
-// Reset button 
-document.getElementById('reset-code').addEventListener('click', () => {
-    if (currentLesson) {
-        showEditor(currentLesson); 
-    } 
+//reset-button
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('reset-code').addEventListener('click', resetEditor);
 });
+
 
 document.getElementById('copy-code').addEventListener('click', () => {
     const code = editor.getValue();
