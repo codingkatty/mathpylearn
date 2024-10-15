@@ -102,7 +102,7 @@ To ensure a smooth review process, please follow these guidelines when submittin
 
 - Your code should be well-documented and include clear comments where necessary.
 - Run any relevant tests to ensure that your changes don't introduce new issues.
-- Ensure your code follows the project's coding standards and style guide (see [Style Guide](#style-guide)).
+- Ensure your code follows the project's coding standards and style guide.
 - Keep your pull request focused on a single feature or bug fix.
 - Provide a clear and concise title and description for your pull request.
 
