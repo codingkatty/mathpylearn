@@ -3,9 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Math4Python</title>
-    <link rel="stylesheet" href="about.css">
+
+    <title>About Math 4 Python</title>
+    <link rel="shortcut icon" href="Untitled design1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #2C3E50;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        a {
+            color: #3498DB;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .banner {
+            background-color: #2980B9;
+            color: white;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: #2C3E50;
+            color: #fff;
+            border-radius: 0 0 8px 8px;
+        }
+        .footer-section {
+            flex: 1;
+            padding: 10px;
+        }
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .footer-section a {
+            color: #3498DB;
+        }
+        .footer-bottom {
+            background: #1A252F;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        #nav-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2980B9;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+        #nav-top:hover {
+            background: #3498DB;
+        }
+    </style>
+
 </head>
+
 <body>
     <header>
         <h1>About Math4Python</h1>
@@ -62,17 +172,116 @@
         </section>
     </main>
 
+    <div class="navbar"> 
+        <h1 class="title">MathPyLearn</h1>
+        <div class="theme-toggle-wrapper">
+            <button style="cursor: pointer;" id="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="learn.html">Learn</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="faq.html">FAQs</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="banner">
+            <h1>About Math 4 Python</h1>
+        </div>
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>At Math 4 Python, we are dedicated to combining the power of Python programming with key mathematical concepts. Our platform focuses on helping learners enhance their problem-solving skills through interactive coding experiences that emphasize math applications.</p>
+        </div>
+        <div class="section">
+            <h2>Who Is It For?</h2>
+            <p>Whether you are a beginner in Python or a math enthusiast looking to apply coding to real-world problems, Math 4 Python offers an engaging and structured learning path. Our platform caters to students, professionals, and hobbyists aiming to build or enhance their coding and mathematical skills.</p>
+        </div>
+        <div class="section">
+            <h2>What We Offer</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Interactive Lessons</h3>
+                    <p>Learn Python through hands-on coding exercises that reinforce key programming concepts.</p>
+                </div>
+                <div class="card">
+                    <h3>Math-focused Challenges</h3>
+                    <p>Apply Python to solve mathematical problems and improve your coding and analytical abilities.</p>
+                </div>
+                <div class="card">
+                    <h3>Real-time Feedback</h3>
+                    <p>Get instant feedback on your code to track your progress and stay on the right learning path.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Why Choose Math 4 Python?</h2>
+            <p>We provide a unique approach to learning by blending coding with math, offering practical, real-world challenges that make the learning process engaging and effective.</p>
+        </div>
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like more information, feel free to reach out to us at <a href="https://magicmath.co/">https://magicmath.co/</a>.</p>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Math4Python. All rights reserved.</p>
-        <nav>
-            <ul>
-                <li><a href="#intro">About</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#cta">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Math 4 Python</h3>
+                <p>Enhance your Python skills while solving math-focused challenges. Learn, code, and improve through interactive lessons with real-time feedback.</p>
+                <p><i class="fas fa-envelope"></i> contact@math4python.com</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="challenge.html">Challenge</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <button onclick="topFunction()" id="nav-top">
+        <i class="material-icons">arrow_upward</i>
+    </button>
+
+    <script src="script.js"></script>
+
+    <script>
+        let mybutton = document.getElementById("nav-top");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+                }
+        }
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
 </body>
 </html>

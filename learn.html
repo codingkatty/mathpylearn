@@ -13,47 +13,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <style>
-        
-    </style>
-
 </head>
 <body id="learn" onload="showEditor('Untitled')">
-
     <div class="navbar">
         <h1 class="title">MathPyLearn</h1>
-        <div class="navbar">
-            <!-- Hamburger Menu for Mobile -->
-            <div class="hamburger" id="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
-            <!-- Navbar Links -->
-            <div class="nav-links" id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="learn.html" class="active">Learn</a>
-                <a href="challenge.html">Challenge</a>
-                <a href="faq.html">FAQs</a>
-            </div>
-
-            <!-- Theme Toggle -->
-            <div class="theme-toggle-wrapper">
-                <button style="cursor: pointer;" id="theme-toggle">
-                    <i class="fas fa-sun"></i>
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Navbar Links -->
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="learn.html" class="active">Learn</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="faq.html">FAQs</a>
+        </div>
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-wrapper">
+            <button style="cursor: pointer;" id="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </div>
-
     <div class="content">
         <a class="logo" href="index.html"><img src="logonew.svg" height="40" width="40" alt="Math 4 Python Logo"></a>
     </div>
-    
     <div class="content">
         <h2>Python Lessons</h2>
         <p>Welcome to the Python lessons! Choose a lesson below to get started.</p>
@@ -61,7 +49,6 @@
             <button id="generate-question-button" onclick="generateQuestion()">Click For Practice Question</button>
             <p id="random-question"></p>
         </div>
-        
         <div class="learn-container">
             <div class="lesson-list">
                 <ul>
@@ -76,15 +63,13 @@
                     <li><a href="#" onclick="showEditor('Dictionary')">Dictionary</a></li>
                 </ul>
             </div>
-
             <div class="editor-area">
                 <div id="editor-container">
                     <div id="editor-controls">
                         <button id="reset-code">Reset Code</button>
                         <button id="copy-code">Copy Code</button>
-                        <p id="copy-message" style="display: none; color: black;">Copied!</p>                  
-                    </div>  
-
+                        <p id="copy-message" style="display: none; color: black;">Copied!</p>
+                    </div>
                     <h2>Code Input :</h2>
                     <div id="editor"></div>
                     <h2>Output :</h2>
@@ -92,7 +77,6 @@
                         <div id="terminal"></div>
                     </div>
                 </div>
-                
                 <div id="button-container">
                     <button id="run-button" onclick="runCode()">Run Code</button>
                     <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button>
@@ -101,7 +85,6 @@
                 </div>
             </div>
         </div>
-
         <div class="progress-container">
             <h3>Lesson Progress</h3>
             <div class="progress-bar">
@@ -110,7 +93,6 @@
             <button id="lesson-reset-btn" class="reset-btn">Reset Progress</button>
         </div>
     </div>
-
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
@@ -119,7 +101,6 @@
                 <p><i class="fas fa-envelope"></i> contact@math4python.com</p>
                 <p><i class="fas fa-phone"></i> +123 456 7890</p>
             </div>
-    
             <div class="footer-section links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -130,7 +111,6 @@
                     <li><a href="faq.html">FAQs</a></li>
                 </ul>
             </div>
-    
             <div class="footer-section social">
                 <h3>Follow Us</h3>
                 <a href="#"><i class="fab fa-facebook"></i></a>
@@ -139,18 +119,15 @@
                 <a href="#"><i class="fab fa-github"></i></a>
             </div>
         </div>
-    
         <div class="footer-bottom">
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
     </footer>
     <button onclick="topFunction()" id="nav-top"><i class="material-icons">arrow_upward</i></button>
-
     <script src="script.js"></script>
     <script>
         let mybutton = document.getElementById("nav-top");
         window.onscroll = function() {scrollFunction()};
-
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
@@ -158,7 +135,6 @@
                 mybutton.style.display = "none";
             }
         }
-
         function topFunction() {
             window.scrollTo({
                 top: 0,
