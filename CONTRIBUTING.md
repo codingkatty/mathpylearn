@@ -47,7 +47,7 @@ If you want to contribute code changes, follow these steps:
     git checkout -b feature/your-feature-name
     ```
 
-4. **Make your changes**, following the [style guide](#style-guide) and ensuring that your code adheres to the project's coding standards.
+4. **Make your changes**, following the style guide and ensuring that your code adheres to the project's coding standards.
 
 5. **Commit your changes** with a descriptive commit message.
     ```bash
