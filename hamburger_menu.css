@@ -20,12 +20,42 @@
     padding: 8px 12px;
     border-radius: 4px;
 }
-
+.reset-btn {
+    background-color: #dc3545;
+  }
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  .copy-btn {
+    background-color: #007bff;
+  }
+  
+  .copy-btn:hover {
+    background-color: #0056b3;
+  }
+  .btn i {
+    margin-right: 8px;
+  }
+  .button-container{
+    display: flex;
+  justify-content: center;
+  gap: 10px;
+  }
 .nav-links a.active,
 .nav-links a:hover {
     background-color: #575757;
 }
-
+.reset-btn:hover {
+    background-color: #c82333;
+  }
 .theme-toggle-wrapper {
     margin-right: 10px;
 }
