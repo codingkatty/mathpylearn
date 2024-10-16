@@ -86,7 +86,36 @@ function showEditor(lesson) {
         editor.setOptions({
             fontSize: "18px"
         });
-    }
+ 
+// Enable basic autocompletion
+    editor.setOptions({
+        enableBasicAutocompletion: true,
+        enableLiveAutocompletion: true,
+        enableSnippets: true
+    });
+
+// Define custom keywords for auto-completion
+    const customKeywords = ['import', 'from', 'class', 'def', 'return', 'for', 'while', 'if', 'elif', 'else', 
+        'try', 'except', 'finally', 'with', 'as', 'lambda', 'print', 'input', 'len', 
+        'str', 'int', 'float', 'bool', 'list', 'dict', 'set', 'tuple', 'open', 'range'];
+    const customCompleter = {
+        getCompletions: function(editor, session, pos, prefix, callback) {
+            if (prefix.length === 0) { return callback(null, []); }
+            const completions = customKeywords.map(function(keyword) {
+                return {
+                    caption: keyword,
+                    value: keyword,
+                    meta: "keyword"
+                };
+            });
+            callback(null, completions);
+        }
+    };
+
+    // Add the custom completer to ACE's completers
+    ace.require("ace/ext/language_tools").addCompleter(customCompleter);
+
+ }
 
     // Update the editor content based on the lesson chosen
     if (lesson === 'Hello World') {
