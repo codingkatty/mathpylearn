@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #eef2f7; /* Softer, modern background */
-    color: #333; /* Darker text */
+    color: white; /* Darker text */
     transition: background-color 0.3s ease, color 0.3s ease;
     line-height: 1.6;
 }
@@ -40,18 +40,7 @@ body {
 .navbar a:hover {
     background-color: #007bff;
     color: #fff;
-    box-shadow: 0 4px 12px rgba(163, 165, 167, 0.2);
-}
-
-#icon1{
-    width:50%;
-    height:50%
-}
-#icon2,#icon3{
-    width:50%;
-    height:40%
-
-
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
 }
 
 .navbar a.active {
@@ -98,7 +87,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    color: #333;
+    color: white;
     font-weight: 700; /* Bolder titles */
 }
 
@@ -130,10 +119,6 @@ h2 {
 .feature:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Lift on hover */
-    #icon1,#icon2,#icon3{
-        cursor: pointer;
-        filter:drop-shadow(10px 10px 7px #9dc6f1);
-    }
 }
 
 .feature h3 {
@@ -354,11 +339,6 @@ a.clicked {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.footer-content h3{
-    color: white;
-    font-size: 1.2em;
-}
- 
 
 /* FAQ Page Styles */
 .faq-container {
@@ -527,127 +507,3 @@ body.dark-theme .cta-button:hover {
   #nav-top:hover {
     background-color: #555; 
   }
-
-  /* challenge.css*/
-  /* General Styling */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
-}
-
-h1, h2, h3 {
-    font-family: 'Lobster', cursive;
-}
-
-/* Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.nav-links a.active {
-    border-bottom: 2px solid #ffd700;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 2px;
-    background-color: white;
-}
-
-/* Content Area */
-.content {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-.progress-container {
-    margin-bottom: 20px;
-}
-
-.progress-bar {
-    background-color: #ddd;
-    border-radius: 10px;
-    width: 100%;
-    height: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.progress {
-    background-color: #00cc66;
-    height: 100%;
-    width: 0%;
-    transition: width 0.5s ease;
-}
-
-/* Challenge List */
-.challenge-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-#challenge-list {
-    width: 45%;
-    list-style: none;
-    padding: 0;
-}
-
-#challenge-list li {
-    margin: 10px 0;
-}
-
-#challenge-list a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-#challenge-list a:hover {
-    color: #00cc66;
-}
-
-/* Challenge Description */
-.challenge-description {
-    width: 50%;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-/* Responsive Design */
-
