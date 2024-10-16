@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math 4 Python - Learn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="hamburger_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -64,8 +65,17 @@
             <div class="editor-area">
                 <div id="editor-container">
                     <div id="editor-controls">
-                        <button id="reset-code">Reset Code</button>
-                        <button id="copy-code">Copy Code</button>
+                      
+                        <button id="reset-code" class="btn reset-btn">
+                            <i class="fas fa-redo"></i> Reset Code
+                          </button> <br>
+                        <!-- <button id="copy-code">
+                            <i class="fas fa-copy"></i> Copy Code
+                        </button> -->
+                         <button id="copy-code" class="btn copy-btn">
+        <i class="fas fa-copy"></i> Copy Code
+      </button>
+      <br>
                         <p id="copy-message" style="display: none; color: black;">Copied!</p>
                     </div>
                     <h2>Code Input :</h2>
@@ -78,8 +88,13 @@
                 <div id="button-container">
                     <button id="run-button" onclick="runCode()">Run Code</button>
                     <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button>
-                    <button id="copy-button" onclick="copyCode()">Copy Code</button>
-                    <button id="reset-button" onclick="resetEditor()">Reset Code</button>
+                    <br>
+                    <br>
+                    <button id="copy-button" class="btn copy-btn" onclick="copyCode()">  
+                        <i class="fas fa-copy"></i> Copy Code
+                      </button>
+                      <br>
+                    <button id="reset-button"  class="btn reset-btn" onclick="resetEditor()">  <i class="fas fa-redo"></i>Reset Code</button>
                 </div>
             </div>
         </div>
