@@ -28,26 +28,63 @@ body {
     flex-grow: 1; /* Ensures links take up available space */
 }
 
-.navbar a {
-    color: #f2f2f2;
-    text-decoration: none;
-    padding: 10px 20px;
+#theme-toggle {
+    width: 5em;
+    position: relative;
+    height: 3.8em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
     font-size: 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    margin-right: 7px;
 }
+
+.navbar a {
+    width: 7em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+
+}
+
+  .navbar a:hover::before, .navbar a:hover::after {
+    transform: scale(0)
+  }
 
 .navbar a:hover {
-    background-color: #007bff;
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+    box-shadow: inset 0px 0px 25px #1479EA;
 }
 
-.navbar a.active {
+/* .navbar a.active {
     background-color: #007bff;
     color: white;
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
-}
+} */
 
 /* Theme Toggle Alignment Fix */
 .theme-toggle {
