@@ -116,6 +116,7 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Stronger shadow for modern look */
     transition: background-color 0.3s ease;
     animation: fadeIn 1.2s ease-in-out; /* Smooth content load animation */
+    margin-bottom: 35px;
 }
 
 @keyframes fadeIn {
@@ -462,7 +463,7 @@ body.dark-theme .accordion.active {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 40px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -471,7 +472,6 @@ footer {
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
-    padding: 20px;
 }
 
 .footer-section {
