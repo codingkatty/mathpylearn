@@ -1,7 +1,7 @@
 let editor;
 let pyodide;
 let currentLesson;
-let currentContentType; 
+let currentContentType;
 
 // Add these lines at the beginning of the file
 let userProgress = JSON.parse(localStorage.getItem('userProgress')) || {
@@ -24,27 +24,27 @@ function updateProgressBar() {
     const challengeProgress = document.getElementById('challenge-progress');
     const lessonResetBtn = document.getElementById('lesson-reset-btn');
     const challengeResetBtn = document.getElementById('challenge-reset-btn');
-    
+
     if (lessonProgress) {
         const completedLessons = Object.values(userProgress.lessons).filter(Boolean).length;
         const totalLessons = document.querySelectorAll('.lesson-list li').length;
         const lessonPercentage = (completedLessons / totalLessons) * 100;
         lessonProgress.style.width = `${lessonPercentage}%`;
         lessonProgress.textContent = `${Math.round(lessonPercentage)}%`;
-        
+
         // Show reset button if there's any progress
         if (lessonResetBtn) {
             lessonResetBtn.style.display = completedLessons > 0 ? 'inline-block' : 'none';
         }
     }
-    
+
     if (challengeProgress) {
         const completedChallenges = Object.values(userProgress.challenges).filter(Boolean).length;
         const totalChallenges = document.querySelectorAll('#challenge-list li').length;
         const challengePercentage = (completedChallenges / totalChallenges) * 100;
         challengeProgress.style.width = `${challengePercentage}%`;
         challengeProgress.textContent = `${Math.round(challengePercentage)}%`;
-        
+
         // Show reset button if there's any progress
         if (challengeResetBtn) {
             challengeResetBtn.style.display = completedChallenges > 0 ? 'inline-block' : 'none';
@@ -86,36 +86,36 @@ function showEditor(lesson) {
         editor.setOptions({
             fontSize: "18px"
         });
- 
-// Enable basic autocompletion
-    editor.setOptions({
-        enableBasicAutocompletion: true,
-        enableLiveAutocompletion: true,
-        enableSnippets: true
-    });
 
-// Define custom keywords for auto-completion
-    const customKeywords = ['import', 'from', 'class', 'def', 'return', 'for', 'while', 'if', 'elif', 'else', 
-        'try', 'except', 'finally', 'with', 'as', 'lambda', 'print', 'input', 'len', 
-        'str', 'int', 'float', 'bool', 'list', 'dict', 'set', 'tuple', 'open', 'range'];
-    const customCompleter = {
-        getCompletions: function(editor, session, pos, prefix, callback) {
-            if (prefix.length === 0) { return callback(null, []); }
-            const completions = customKeywords.map(function(keyword) {
-                return {
-                    caption: keyword,
-                    value: keyword,
-                    meta: "keyword"
-                };
-            });
-            callback(null, completions);
-        }
-    };
+        // Enable basic autocompletion
+        editor.setOptions({
+            enableBasicAutocompletion: true,
+            enableLiveAutocompletion: true,
+            enableSnippets: true
+        });
 
-    // Add the custom completer to ACE's completers
-    ace.require("ace/ext/language_tools").addCompleter(customCompleter);
+        // Define custom keywords for auto-completion
+        const customKeywords = ['import', 'from', 'class', 'def', 'return', 'for', 'while', 'if', 'elif', 'else',
+            'try', 'except', 'finally', 'with', 'as', 'lambda', 'print', 'input', 'len',
+            'str', 'int', 'float', 'bool', 'list', 'dict', 'set', 'tuple', 'open', 'range'];
+        const customCompleter = {
+            getCompletions: function (editor, session, pos, prefix, callback) {
+                if (prefix.length === 0) { return callback(null, []); }
+                const completions = customKeywords.map(function (keyword) {
+                    return {
+                        caption: keyword,
+                        value: keyword,
+                        meta: "keyword"
+                    };
+                });
+                callback(null, completions);
+            }
+        };
 
- }
+        // Add the custom completer to ACE's completers
+        ace.require("ace/ext/language_tools").addCompleter(customCompleter);
+
+    }
 
     // Update the editor content based on the lesson chosen
     if (lesson === 'Hello World') {
@@ -181,7 +181,7 @@ intersection_set = my_set.intersection(another_set)
 print("Intersection of sets:", intersection_set)`, 1);
     }
     else if (lesson === 'Dictionary') {
-    editor.setValue(`\
+        editor.setValue(`\
 # Lesson: Dictionaries in Python
 # Dictionaries store key-value pairs.
 # Keys must be unique and can be of different data types.
@@ -265,8 +265,8 @@ print("Removing element at index 1:", my_list)  # Output: [1, 20, 4, 5, 100]
 # 4.5 Removing the last element
 my_list.pop()
 print("Removing the last element:", my_list)  # Output: [1, 20, 4, 5]`, 1);
-        }
-        else if (lesson === 'Tuples') { 
+    }
+    else if (lesson === 'Tuples') {
         editor.setValue(`\
 # 1. Creating Tuples
 # Creating a tuple with integers
@@ -328,7 +328,23 @@ a, b, c = my_tuple
 print("Unpacking", a)  # Output: 10
 print(b)  # Output: 20
 print(c)  # Output: 30`, 1);
-        }
+    }
+    else if (lesson === "TryExcept") {
+        editor.setValue(`\
+# Example 1
+try:
+    result = 10 / 0     # Risky code
+except ZeroDivisionError:
+    print("Cannot divide by zero!") # Handling the exception
+    
+# Example 2
+try:
+    age = 17
+    if age < 18:
+        raise ValueError("You must be at least 18 years old.")
+except ValueError as e:
+    print(e)`, 1);
+    }
     updateProgress('lesson', lesson);
 }
 
@@ -424,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // script.js
 document.querySelectorAll('#challenge-list a').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
         e.preventDefault(); // Prevent the default behavior
 
         // Remove the 'clicked' class from all links
@@ -623,12 +639,12 @@ function viewChallenge(challengeName) {
 }
 
 // FAQ Accordion
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var acc = document.getElementsByClassName("accordion");
     var i;
 
     for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
+        acc[i].addEventListener("click", function () {
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
             if (panel.style.maxHeight) {
@@ -647,10 +663,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.getElementById("nav-links");
 
 
-hamburger.addEventListener("click", () => {
+    hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("show");
     });
-  
+
     const lessonResetBtn = document.getElementById('lesson-reset-btn');
     const challengeResetBtn = document.getElementById('challenge-reset-btn');
 
@@ -680,7 +696,7 @@ function resetEditor() {
 }
 
 //reset-button
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('reset-code').addEventListener('click', resetEditor);
 });
 
@@ -690,10 +706,10 @@ document.getElementById('copy-code').addEventListener('click', () => {
     navigator.clipboard.writeText(code)
         .then(() => {
             const copyMessage = document.getElementById('copy-message');
-            copyMessage.style.display = 'block'; 
+            copyMessage.style.display = 'block';
             setTimeout(() => {
-                copyMessage.style.display = 'none'; 
-            }, 1000); 
+                copyMessage.style.display = 'none';
+            }, 1000);
         })
         .catch(err => {
             console.error("Failed to copy text: ", err);
