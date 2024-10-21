@@ -15,35 +15,61 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
+        /* Footer section */
         footer {
-            background-color: #333;
-            color: #fff;
+            background: linear-gradient(135deg, #1c1c1c, #333);
+            color: #e6e6e6;
             padding: 20px 0;
+            position: relative;
+            box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
         }
 
         .footer-content {
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
-            padding: 20px;
+            padding: 40px 20px;
             flex-wrap: wrap;
-            /* Ensures wrapping on smaller screens */
+            position: relative;
+            z-index: 2;
         }
 
         .footer-section {
             flex: 1;
-            margin: 10px;
+            margin: 15px;
             min-width: 250px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .footer-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .footer-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            background: linear-gradient(45deg, #007bff, #ff7bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
         }
 
         .footer-section p,
         .footer-section ul {
             font-size: 1rem;
+            color: #ccc;
         }
 
         .footer-section ul {
@@ -52,40 +78,73 @@
         }
 
         .footer-section ul li {
-            margin: 5px 0;
+            margin: 8px 0;
         }
 
         .footer-section a {
-            color: #fff;
+            color: #e6e6e6;
             text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+
+        .footer-section a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #007bff, #ff7bff);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .footer-section a:hover::after {
+            transform: scaleX(1);
         }
 
         .footer-section a:hover {
-            text-decoration: underline;
+            color: #ff7bff;
         }
 
         .footer-bottom {
             text-align: center;
-            padding: 10px 0;
-            background-color: #222;
+            padding: 20px 0;
+            background-color: #151515;
             font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
         }
 
         .footer-bottom p {
             margin: 0;
+            color: #aaa;
+        }
+
+        .social {
+            margin-top: 20px;
         }
 
         .social a {
             color: #fff;
-            font-size: 1.2rem;
-            margin-right: 10px;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .social a:hover {
-            color: #007bff;
+            color: #ff7bff;
+            transform: scale(1.3);
+            box-shadow: 0 0 15px rgba(255, 123, 255, 0.7);
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .footer-content {
                 flex-direction: column;
@@ -98,15 +157,8 @@
             }
 
             .social a {
-                margin-right: 15px;
+                margin-right: 10px;
             }
-        }
-
-        .footer-section h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #ffffff;
         }
     </style>
 </head>
