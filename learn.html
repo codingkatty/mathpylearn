@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,165 @@
     <link rel="stylesheet" href="hamburger_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="Untitled design1.ico" type="image/x-icon">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.js" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.js"></script>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        /* Footer section */
+        footer {
+            background: linear-gradient(135deg, #1c1c1c, #333);
+            color: #e6e6e6;
+            padding: 20px 0;
+            position: relative;
+            box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 15px;
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .footer-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            background: linear-gradient(45deg, #007bff, #ff7bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .footer-section p,
+        .footer-section ul {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 8px 0;
+        }
+
+        .footer-section a {
+            color: #e6e6e6;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+
+        .footer-section a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #007bff, #ff7bff);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .footer-section a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .footer-section a:hover {
+            color: #ff7bff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #151515;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            color: #aaa;
+        }
+
+        .social {
+            margin-top: 20px;
+        }
+
+        .social a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .social a:hover {
+            color: #ff7bff;
+            transform: scale(1.3);
+            box-shadow: 0 0 15px rgba(255, 123, 255, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-section {
+                margin-bottom: 20px;
+            }
+
+            .social a {
+                margin-right: 10px;
+            }
+        }
+    </style>
 </head>
+
 <body id="learn" onload="showEditor('Untitled')">
     <div class="navbar">
         <h1 class="title">MathPyLearn</h1>
@@ -42,7 +194,7 @@
             </button>
         </div>
     </div>
-    
+
     <div class="content">
         <h2>Python Lessons</h2>
         <p>Welcome to the Python lessons! Choose a lesson below to get started.</p>
@@ -68,22 +220,22 @@
             <div class="editor-area">
                 <div id="editor-container">
                     <div id="editor-controls">
-                      
+
                         <button id="reset-code" class="btn reset-btn">
                             <i class="fas fa-redo"></i> Reset Code
-                          </button> <br>
+                        </button> <br>
                         <!-- <button id="copy-code">
                             <i class="fas fa-copy"></i> Copy Code
                         </button> -->
-                         <button id="copy-code" class="btn copy-btn">
-        <i class="fas fa-copy"></i> Copy Code
-      </button>
-      <br>
+                        <button id="copy-code" class="btn copy-btn">
+                            <i class="fas fa-copy"></i> Copy Code
+                        </button>
+                        <br>
                         <p id="copy-message" style="display: none; color: black;">Copied!</p>
                     </div>
                     <h2 style="color: black;">Code Input :</h2>
                     <div id="editor"></div>
-                    
+
                     <h2 style="color: black;">Output :</h2>
                     <div id="terminal-container">
                         <div id="terminal"></div>
@@ -94,24 +246,29 @@
                     <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button>
                     <br>
                     <br>
-                    
-                   
-        <div class="progress-container">
-            <h3>Lesson Progress</h3>
-            <div class="progress-bar">
-                <div id="lesson-progress" class="progress"></div>
+                    <div class="progress-container">
+                        <h3>Lesson Progress</h3>
+                        <div class="progress-bar">
+                            <div id="lesson-progress" class="progress"></div>
+                        </div>
+                        <button id="lesson-reset-btn" class="reset-btn">Reset Progress</button>
+                    </div>
+                </div>
             </div>
-            <button id="lesson-reset-btn" class="reset-btn">Reset Progress</button>
+
         </div>
     </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
                 <h3>Math 4 Python</h3>
-                <p>Enhance your Python skills while solving math-focused challenges. Learn, code, and improve through interactive lessons with real-time feedback.</p>
-                <p><i class="fas fa-envelope"></i> contact@math4python.com</p>
-                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p>Enhance your Python skills while solving math-focused challenges. Learn, code, and improve through
+                    interactive lessons with real-time feedback.</p>
+                <p><span class="fas fa-envelope"></span> contact@math4python.com</p>
+                <p><span class="fas fa-phone"></span> +123 456 7890</p>
             </div>
+
             <div class="footer-section links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -122,23 +279,26 @@
                     <li><a href="faq.html">FAQs</a></li>
                 </ul>
             </div>
+
             <div class="footer-section social">
                 <h3>Follow Us</h3>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><span class="fab fa-facebook"></span></a>
+                <a href="#"><span class="fab fa-twitter"></span></a>
+                <a href="#"><span class="fab fa-linkedin"></span></a>
+                <a href="#"><span class="fab fa-github"></span></a>
             </div>
         </div>
+
         <div class="footer-bottom">
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
     </footer>
+    
     <button onclick="topFunction()" id="nav-top"><i class="material-icons">arrow_upward</i></button>
     <script src="script.js"></script>
     <script>
         let mybutton = document.getElementById("nav-top");
-        window.onscroll = function() {scrollFunction()};
+        window.onscroll = function () { scrollFunction() };
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
@@ -154,4 +314,5 @@
         }
     </script>
 </body>
+
 </html>
