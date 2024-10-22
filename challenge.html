@@ -15,27 +15,23 @@
 <body id="challenge">
 
     <div class="navbar">
-        <h1 class="title">MathPyLearn</h1>
-        <!-- Hamburger Menu for Mobile -->
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <!-- Navbar Links -->
-        <div class="nav-links" id="nav-links">
+        <a class="logo" href="index.html"><img src="logonew.svg" width="40"></a>
+        <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="learn.html">Learn</a>
             <a href="challenge.html" class="active">Challenge</a>
             <a href="faq.html">FAQs</a>
         </div>
-        <!-- Theme Toggle -->
         <div class="theme-toggle-wrapper">
             <button style="cursor: pointer;" id="theme-toggle">
                 <i class="fas fa-sun"></i>
                 <i class="fas fa-moon"></i>
             </button>
+            <a href="javascript:void(0);" class="icon" onclick="openMobileMenu()">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times" style="display: none;"></i>
+            </a>
         </div>
     </div>
 

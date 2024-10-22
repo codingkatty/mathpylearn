@@ -23,6 +23,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    gap: 10px;
 }
 
 .navbar .nav-links {
@@ -54,10 +55,10 @@ body {
     margin-right: 7px;
 }
 
-.navbar a {
-    width: 7em;
+.navbar .nav-links a {
+    width: 5.5em;
     position: relative;
-    height: 3.5em;
+    height: 2.2em;
     border: 3px ridge #149CEA;
     outline: none;
     background-color: transparent;
