@@ -1,121 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math 4 Python - Learn and Challenge Your Math Skills</title>
-    <meta name="description" content="A platform to learn mathematical concepts for Python programming and engage in coding challenges.">
-    <meta name="keywords" content="math, python, learning, challenges, programming">
-    <link rel="icon" href="Untitled design1.ico" type="image/svg+xml">
-    <!-- <link rel="shortcut icon" href="Untitled design1.ico" type="image/x-icon">-->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
-</head>
-<body id="home">
-    <div class="navbar">
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="learn.html">Learn</a>
-            <a href="challenge.html">Challenge</a>
-            <a href="faq.html">FAQs</a>
-        </div>
-        <div class="theme-toggle-wrapper">
-            <button style="cursor: pointer;" id="theme-toggle">
-                <i class="fas fa-sun"></i>
-                <i class="fas fa-moon"></i>
-            </button>
-        </div>
-        <a class="logo" href="index.html"><img src="logonew.svg" width="40"></a>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <div class="content">
-        <h1>Welcome to Math 4 Python</h1>
-        <p>Learn Python programming with a focus on mathematical concepts and problem-solving.</p>
+    <title>About Math 4 Python</title>
+    <link rel="shortcut icon" href="Untitled design1.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        background: #282828;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        color: white;
         
-        <div class="features">
-            <h2>Key Features:</h2>
-            <div class="feature">
-                <img src="images/lesson.png" alt="Interactive Lessons" id="icon1">
-                <h3>Interactive Lessons</h3>
-                <p>Learn Python through hands-on, interactive coding exercises.</p>
-            </div>
-            <div class="feature">
-                <img src="images/task.png" alt="Math Challenges" id="icon2">
-                <h3>Math-focused Challenges</h3>
-                <p>Solve mathematical problems using Python to reinforce your skills.</p>
-            </div>
-            <div class="feature">
-                <img src="images/feedback.png" alt="Real-time Feedback" id="icon3">
-                <h3>Real-time Feedback</h3>
-                <p>Get instant feedback on your code and track your progress.</p>
-            </div>
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: #2c3e50;
+      }
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .banner {
+        background-color: #2980b9;
+        color: white;
+        padding: 10px 0;
+        margin-bottom: 20px;
+        text-align: center;
+        border-radius: 8px 8px 0 0;
+      }
+      .banner h1 {
+        margin: 0;
+        font-size: 2em;
+        color: beige;
+      }
+      .section {
+        margin: 20px 0;
+      }
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .card {
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        text-align: center;
+      }
+      .card p {
+        color: black;
+      }
+      .title {
+        color: white;
+      }
+      .container h2 {
+        color: beige;
+      }
+      .dark-theme .card h3 {
+        color: black;
+      }
+      /* Footer section */
+      footer {
+        background: linear-gradient(135deg, #1c1c1c, #333);
+        color: #e6e6e6;
+        padding: 20px 0;
+        position: relative;
+        box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 40px 20px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+      }
+
+      .footer-section {
+        flex: 1;
+        margin: 15px;
+        min-width: 250px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        padding: 20px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .footer-section:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .footer-section h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #ffffff;
+        background: linear-gradient(45deg, #007bff, #ff7bff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+      }
+
+      .footer-section p,
+      .footer-section ul {
+        font-size: 1rem;
+        color: #ccc;
+      }
+
+      .footer-section ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .footer-section ul li {
+        margin: 8px 0;
+      }
+
+      .footer-section a {
+        color: #e6e6e6;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s ease, background 0.3s ease;
+      }
+
+      .footer-section a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #007bff, #ff7bff);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+      }
+
+      .footer-section a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .footer-section a:hover {
+        color: #ff7bff;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #151515;
+        font-size: 0.9rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+        color: #aaa;
+      }
+
+      .social {
+        margin-top: 20px;
+      }
+
+      .social a {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-right: 15px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .social a:hover {
+        color: #ff7bff;
+        transform: scale(1.3);
+        box-shadow: 0 0 15px rgba(255, 123, 255, 0.7);
+      }
+
+      @media (max-width: 768px) {
+        .footer-content {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .footer-section {
+          margin-bottom: 20px;
+        }
+
+        .social a {
+          margin-right: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar">
+      
+      <h1 class="title">MathPyLearn</h1>
+      <!-- Hamburger Menu for Mobile -->
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <!-- Navbar Links -->
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="learn.html">Learn</a>
+        <a href="challenge.html">Challenge</a>
+        <a href="faq.html">FAQs</a>
+      </div>
+      <!-- Theme Toggle -->
+      <div class="theme-toggle-wrapper">
+        <button style="cursor: pointer" id="theme-toggle">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="banner">
+        <h1>About Math 4 Python</h1>
+      </div>
+      <div class="section">
+        <h2>Our Mission</h2>
+        <p>
+          At Math 4 Python, we are dedicated to combining the power of Python
+          programming with key mathematical concepts. Our platform focuses on
+          helping learners enhance their problem-solving skills through
+          interactive coding experiences that emphasize math applications.
+        </p>
+      </div>
+      <div class="section">
+        <h2>Who Is It For?</h2>
+        <p>
+          Whether you are a beginner in Python or a math enthusiast looking to
+          apply coding to real-world problems, Math 4 Python offers an engaging
+          and structured learning path. Our platform caters to students,
+          professionals, and hobbyists aiming to build or enhance their coding
+          and mathematical skills.
+        </p>
+      </div>
+      <div class="section">
+        <h2>What We Offer</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Interactive Lessons</h3>
+            <p>
+              Learn Python through hands-on coding exercises that reinforce key
+              programming concepts.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Math-focused Challenges</h3>
+            <p>
+              Apply Python to solve mathematical problems and improve your
+              coding and analytical abilities.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Real-time Feedback</h3>
+            <p>
+              Get instant feedback on your code to track your progress and stay
+              on the right learning path.
+            </p>
+          </div>
         </div>
-        
-        <div class="call-to-action">
-            <h2>Start learning Today!</h2>
-            <p>Ready to dive into the world of math and Python? Click below to get started!</p>
-            <a href="learn.html" class="cta-button">Get Started</a>
-        </div>
+      </div>
+      <div class="section">
+        <h2>Why Choose Math 4 Python?</h2>
+        <p>
+          We provide a unique approach to learning by blending coding with math,
+          offering practical, real-world challenges that make the learning
+          process engaging and effective.
+        </p>
+      </div>
+      <div class="section">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or would like more information, feel free to
+          reach out to us at
+          <a href="https://magicmath.co/">https://magicmath.co/</a>.
+        </p>
+      </div>
     </div>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section about">
-                <h3>Math 4 Python</h3>
-                <p>Enhance your Python skills while solving math-focused challenges. Learn, code, and improve through interactive lessons with real-time feedback.</p>
-                <p><i class="fas fa-envelope"></i> contact@math4python.com</p>
-                <p><i class="fas fa-phone"></i> +123 456 7890</p>
-            </div>
-    
-            <div class="footer-section links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="learn.html">Learn</a></li>
-                    <li><a href="challenge.html">Challenge</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                </ul>
-            </div>
-    
-            <div class="footer-section social">
-                <h3>Follow Us</h3>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-            </div>
+      <div class="footer-content">
+    <div class="footer-section about">
+        <h3>Math 4 Python</h3>
+        <p>
+            Enhance your Python skills while solving math-focused challenges.
+            Learn, code, and improve through interactive lessons with real-time
+            feedback.
+        </p>
+        <p>
+            <span class="fas fa-envelope"></span>
+            <a href="mailto:contact@math4python.com">contact@math4python.com</a>
+        </p>
+        <p>
+            <span class="fas fa-phone"></span>
+            <a href="tel:+1234567890">+123 456 7890</a>
+        </p>
+    </div>
+</div>
+
+
+        <div class="footer-section social">
+          <h3>Follow Us</h3>
+          <a href="#"><span class="fab fa-facebook"></span></a>
+          <a href="#"><span class="fab fa-twitter"></span></a>
+          <a href="#"><span class="fab fa-linkedin"></span></a>
+          <a href="#"><span class="fab fa-github"></span></a>
         </div>
-    
-        <div class="footer-bottom">
-            <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
-        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
+      </div>
     </footer>
 
-    <button onclick="topFunction()" id="nav-top"><i class="material-icons">arrow_upward</i></button>
+    <button onclick="topFunction()" id="nav-top">
+      <i class="material-icons">arrow_upward</i>
+    </button>
+
     <script src="script.js"></script>
 
     <script>
-        let mybutton = document.getElementById("nav-top");
-        window.onscroll = function() {scrollFunction()};
+      let mybutton = document.getElementById("nav-top");
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
         }
-
-        function topFunction() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
+      }
+      function topFunction() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
     </script>
-</body>
+  </body>
 </html>
