@@ -659,14 +659,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("nav-links");
-
-
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-    });
-
     const lessonResetBtn = document.getElementById('lesson-reset-btn');
     const challengeResetBtn = document.getElementById('challenge-reset-btn');
 
@@ -680,6 +672,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateProgressBar();
 });
+
+function checkWindowSize() {
+    const navLinks = document.querySelector('.nav-links');
+    const icon = document.querySelector('.icon');
+
+    if (window.innerWidth > 992) {
+        navLinks.style.display = 'flex';
+        icon.style.display = 'none';
+    } else {
+        navLinks.style.display = 'none';
+        icon.style.display = 'block';
+    }
+}
+
+window.addEventListener('resize', checkWindowSize);
+// window.addEventListener('load', checkWindowSize);
+
+function openMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const menuIcon = document.querySelector(".fa-bars");
+    const closeIcon = document.querySelector(".fa-times");
+
+    if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none";
+        menuIcon.style.display = 'inline-block';
+        closeIcon.style.display = 'none';
+    } else {
+        navLinks.style.display = "flex";
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'inline-block';
+    }
+}
 
 //This function should check currentContentType to decide how to reset the editor.
 function resetEditor() {
