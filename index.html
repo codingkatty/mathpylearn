@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math 4 Python - Learn and Challenge Your Math Skills</title>
-    <meta
-      name="description"
-      content="A platform to learn mathematical concepts for Python programming and engage in coding challenges."
-    />
-    <meta
-      name="keywords"
-      content="math, python, learning, challenges, programming"
-    />
-    <link rel="icon" href="Untitled design1.ico" type="image/svg+xml" />
-    <!-- <link rel="shortcut icon" href="Untitled design1.ico" type="image/x-icon">-->
+    <meta name="description" content="A platform to learn mathematical concepts for Python programming and engage in coding challenges.">
+    <meta name="keywords" content="math, python, learning, challenges, programming">
+    <link rel="icon" href="Untitled design1.ico" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="hamburger_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
 </head>
 <body id="home">
     <div class="navbar">
-        <a class="logo" href="index.html"><img src="logonew.svg" width="40"></a>
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
@@ -34,124 +25,138 @@
                 <i class="fas fa-sun"></i>
                 <i class="fas fa-moon"></i>
             </button>
-            <a href="javascript:void(0);" class="icon" onclick="openMobileMenu()">
-                <i class="fa fa-bars"></i>
-                <i class="fa fa-times" style="display: none;"></i>
-            </a>
         </div>
+        <a class="logo" href="index.html"><img src="logonew.svg" width="40"></a>
     </div>
 
     <div class="content">
-      <h1>Welcome to Math 4 Python</h1>
-      <p>
-        Learn Python programming with a focus on mathematical concepts and
-        problem-solving.
-      </p>
-
-      <div class="features">
-        <h2>Key Features:</h2>
-        <div class="feature">
-          <img src="images/lesson.png" alt="Interactive Lessons" id="icon1" />
-          <h3>Interactive Lessons</h3>
-          <p>Learn Python through hands-on, interactive coding exercises.</p>
+        <h1>Welcome to Math 4 Python</h1>
+        <p>Learn Python programming with a focus on mathematical concepts and problem-solving.</p>
+        
+        <div class="features">
+            <h2>Key Features</h2>
+        
+            <!-- Feature 1 -->
+            <div class="feature" id="feature1">
+                <img src="images/lesson.png" alt="Interactive Lessons" id="icon1">
+                <div class="micro-element">
+                    <h3>Interactive Lessons</h3>
+                    <div class="progress-bar" title="80% completed">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <p>Learn Python through hands-on, interactive coding exercises.</p>
+                </div>
+            </div>
+        
+            <!-- Feature 2 -->
+            <div class="feature" id="feature2">
+                <img src="images/task.png" alt="Math Challenges" id="icon2">
+                <div class="micro-element">
+                    <h3>Math-focused Challenges</h3>
+                    <div class="rating" title="4.5 out of 5 stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>Solve mathematical problems using Python to reinforce your skills.</p>
+                </div>
+            </div>
+        
+            <!-- Feature 3 -->
+            <div class="feature" id="feature3">
+                <img src="images/feedback.png" alt="Real-time Feedback" id="icon3">
+                <div class="micro-element">
+                    <h3>Real-time Feedback</h3>
+                    <div class="live-feedback">
+                        <i class="fas fa-check-circle"></i> Code validated successfully!
+                    </div>
+                    <p>Get instant feedback on your code and track your progress.</p>
+                </div>
+            </div>
+        
+            <!-- Feature 4: Peer Ranking -->
+            <div class="feature" id="feature4">
+                <img src="images/leaderboard.png" alt="Peer Ranking" id="icon4">
+                <div class="micro-element">
+                    <h3>Peer Ranking</h3>
+                    <div class="rank">
+                        <p><i class="fas fa-trophy"></i> Your Rank: 5th</p>
+                    </div>
+                    <p>See how you rank among your peers in coding challenges.</p>
+                    <div class="achievement-badges">
+                        <p>Achievements:</p>
+                        <img src="images/badge1.png" alt="Beginner Badge" title="Beginner Badge">
+                        <img src="images/badge2.png" alt="Intermediate Badge" title="Intermediate Badge">
+                        <img src="images/badge3.png" alt="Advanced Badge" title="Advanced Badge">
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Feature 5: Video Tutorials -->
+            <div class="feature" id="feature5">
+                <img src="images/video_tutorials.png" alt="Video Tutorials" id="icon5">
+                <div class="micro-element">
+                    <h3>Video Tutorials</h3>
+                    <p>Access a library of video tutorials that cover various Python concepts.</p>
+                </div>
+            </div>
+        
+            <!-- Feature 6: Mentorship -->
+            <div class="feature" id="feature6">
+                <img src="images/mentorship.png" alt="Mentorship" id="icon6">
+                <div class="micro-element">
+                    <h3>Mentorship</h3>
+                    <p>Connect with mentors to guide you through your learning journey.</p>
+                </div>
+            </div>
         </div>
-        <div class="feature">
-          <img src="images/task.png" alt="Math Challenges" id="icon2" />
-          <h3>Math-focused Challenges</h3>
-          <p>
-            Solve mathematical problems using Python to reinforce your skills.
-          </p>
+        
+        <div class="call-to-action">
+            <h2>Start learning Today!</h2>
+            <p>Ready to dive into the world of math and Python? Click below to get started!</p>
+            <a href="learn.html" class="cta-button">Get Started</a>
         </div>
-        <div class="feature">
-          <img src="images/feedback.png" alt="Real-time Feedback" id="icon3" />
-          <h3>Real-time Feedback</h3>
-          <p>Get instant feedback on your code and track your progress.</p>
-        </div>
-      </div>
-
-      <div class="call-to-action">
-        <h2>Start learning Today!</h2>
-        <p>
-          Ready to dive into the world of math and Python? Click below to get
-          started!
-        </p>
-        <a href="learn.html" class="cta-button">Get Started</a>
-      </div>
     </div>
 
     <footer>
-      <div class="footer-content">
-        <div class="footer-section about">
-          <h3>Math 4 Python</h3>
-          <p>
-            Enhance your Python skills while solving math-focused challenges.
-            Learn, code, and improve through interactive lessons with real-time
-            feedback.
-          </p>
-          <p>
-            <span class="fas fa-envelope"></span>
-            <a href="mailto:contact@math4python.com">contact@math4python.com</a>
-          </p>
-          <p>
-            <span class="fas fa-phone"></span>
-            <a href="tel:+1234567890">+123 456 7890</a>
-          </p>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Math 4 Python</h3>
+                <p>Enhance your Python skills while solving math-focused challenges. Learn, code, and improve through interactive lessons with real-time feedback.</p>
+                <p><i class="fas fa-envelope"></i> contact@math4python.com</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+            </div>
+    
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="challenge.html">Challenge</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
         </div>
-
-        <div class="footer-section links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="learn.html">Learn</a></li>
-            <li><a href="challenge.html">Challenge</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="faq.html">FAQs</a></li>
-          </ul>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
-
-        <div class="footer-section social">
-          <h3>Follow Us</h3>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
-      </div>
     </footer>
 
-    <button onclick="topFunction()" id="nav-top">
-      <i class="material-icons">arrow_upward</i>
-    </button>
+    <button onclick="topFunction()" id="nav-top"><i class="material-icons">arrow_upward</i></button>
     <script src="script.js"></script>
 
-    <script>
-      let mybutton = document.getElementById("nav-top");
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      function topFunction() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-    </script>
-  </body>
+</body>
 </html>

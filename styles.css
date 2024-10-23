@@ -13,17 +13,16 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Soft shadow for a floating effect */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    gap: 10px;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for a floating effect */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar .nav-links {
@@ -34,46 +33,46 @@ body {
 }
 
 #theme-toggle {
-    width: 5em;
-    position: relative;
-    height: 3.8em;
-    border: 3px ridge #149CEA;
-    outline: none;
-    background-color: transparent;
-    color: white;
-    transition: 1s;
-    border-radius: 0.3em;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large;
-    margin-right: 7px;
+  width: 5em;
+  position: relative;
+  height: 3.8em;
+  border: 3px ridge #149cea;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: large;
+  margin-right: 7px;
 }
 
-.navbar .nav-links a {
-    width: 5.5em;
-    position: relative;
-    height: 2.2em;
-    border: 3px ridge #149CEA;
-    outline: none;
-    background-color: transparent;
-    color: white;
-    transition: 1s;
-    border-radius: 0.3em;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large;
+.navbar a {
+  width: 7em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149cea;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: large;
 }
 
 .navbar a:hover::before,
@@ -86,9 +85,9 @@ body {
 }
 
 /* .navbar a.active {
-    background-color: #007bff;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
 } */
 
 /* Theme Toggle Alignment Fix */
@@ -158,6 +157,7 @@ h2 {
 }
 
 /* Features Section */
+/* Features Section */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -167,27 +167,56 @@ h2 {
 
 .feature {
   background: linear-gradient(135deg, #fff, #f0f4f8);
-  /* Subtle gradient */
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Added background transition */
   text-align: center;
+}
+
+.feature img {
+  width: 100px; /* Ensure all images have a uniform size */
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: contain; /* Prevent image distortion */
 }
 
 .feature:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   /* Lift on hover */
+  background: linear-gradient(
+    135deg,
+    #e0f7fa,
+    #b2ebf2
+  ); /* Change background on hover */
 }
 
 .feature h3 {
   color: #007bff;
   margin-bottom: 10px;
+  transition: color 0.3s ease; /* Added transition for color */
+}
+
+.feature:hover h3 {
+  color: #ff5733; /* Change title color on hover */
 }
 
 .feature p {
   color: #666;
+  transition: color 0.3s ease; /* Added transition for paragraph color */
+}
+
+.feature:hover p {
+  color: #333; /* Darker text on hover */
+}
+
+/* Responsive Design for Features */
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
 /* Call-to-Action Button */
@@ -496,23 +525,19 @@ body.dark-theme .cta-button:hover {
 }
 
 #nav-top {
-  position: fixed; /* Keeps the button in a fixed position */
-  bottom: 20px; /* Adjusts the position of the button from the bottom */
-  right: 20px; /* Adjusts the position of the button from the right */
-  z-index: 99; /* Ensures the button appears above other elements */
-  background-color: #0056b3; /* Background color */
-  color: white; /* Text and icon color */
-  padding: 10px; /* Adjust padding to create a larger button */
-  border-radius: 50%; /* Makes the button round */
-  border: none; /* Removes any default borders */
-  cursor: pointer; /* Changes the cursor to pointer */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-  transition: background-color 0.3s ease; /* Smooth transition for hover */
-  width: 50px; /* Set a fixed width for the button */
-  height: 50px; /* Set a fixed height for the button */
-  display: flex; /* Use flexbox to center the icon */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #0056b3;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 70px;
+  font-size: 18px;
 }
 
 #nav-top:hover {
@@ -563,6 +588,7 @@ footer {
   margin-bottom: 20px;
   color: #ffffff;
   background: linear-gradient(45deg, #007bff, #ff7bff);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   border-bottom: 2px solid #007bff;
@@ -637,10 +663,8 @@ footer {
   transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
   display: inline-block;
   text-align: center;
-  width: 50px; /* Set equal width and height for round icons */
-  height: 50px;
-  line-height: 50px; /* Vertically center the icon */
-  border-radius: 50%; /* Makes the icon perfectly round */
+  padding: 10px;
+  border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -663,34 +687,5 @@ footer {
 
   .social a {
     margin-right: 10px;
-  }
-}
-.icon {
-  background: none; /* Remove default button background */
-  border: none; /* Remove default button border */
-  cursor: pointer; /* Change cursor to pointer */
-  color: white; /* Icon color */
-  font-size: 28px; /* Increase the size of the icons */
-  display: flex; /* Use flexbox to center icons */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  padding: 12px; /* Increase padding for a larger button */
-  border-radius: 6px; /* Slightly more rounded corners */
-  transition: background-color 0.3s ease; /* Smooth transition */
-  text-decoration: none; /* Remove underline from anchor tags */
-}
-.icon:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Change background on hover */
-}
-
-.icon i {
-  margin: 0 4px; /* Space between icons */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .icon {
-    padding: 8px; /* Adjust padding for smaller screens */
-    font-size: 20px; /* Slightly smaller icons on mobile */
   }
 }
