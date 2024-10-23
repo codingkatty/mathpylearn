@@ -84,12 +84,6 @@ body {
   box-shadow: inset 0px 0px 25px #1479ea;
 }
 
-/* .navbar a.active {
-  background-color: #007bff;
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
-} */
-
 /* Theme Toggle Alignment Fix */
 .theme-toggle {
   margin-left: auto;
@@ -156,7 +150,6 @@ h2 {
   font-size: 28px;
 }
 
-/* Features Section */
 /* Features Section */
 .features {
   display: grid;

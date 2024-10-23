@@ -45,6 +45,7 @@
 .accordion:hover {
   background-color: #f1f7f5;
 }
+
 .pannel {
   padding: 0 2rem 2.5rem 2rem;
   background-color: white;
@@ -52,6 +53,7 @@
   background-color: #f1f7f5;
   display: none;
 }
+
 .pannel p {
   color: rgba(0, 0, 0, 0.7);
   font-size: 1.2rem;
@@ -62,6 +64,7 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin: 10px 0;
 }
+
 .faq.active {
   border: none;
 }
