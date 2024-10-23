@@ -13,17 +13,17 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  background-color: #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  /* Soft shadow for a floating effect */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  gap: 10px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for a floating effect */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    gap: 10px;
 }
 
 .navbar .nav-links {
@@ -34,46 +34,46 @@ body {
 }
 
 #theme-toggle {
-  width: 5em;
-  position: relative;
-  height: 3.8em;
-  border: 3px ridge #149cea;
-  outline: none;
-  background-color: transparent;
-  color: white;
-  transition: 1s;
-  border-radius: 0.3em;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: large;
-  margin-right: 7px;
+    width: 5em;
+    position: relative;
+    height: 3.8em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    margin-right: 7px;
 }
 
 .navbar .nav-links a {
-  width: 5.5em;
-  position: relative;
-  height: 2.2em;
-  border: 3px ridge #149cea;
-  outline: none;
-  background-color: transparent;
-  color: white;
-  transition: 1s;
-  border-radius: 0.3em;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: large;
+    width: 5.5em;
+    position: relative;
+    height: 2.2em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
 }
 
 .navbar a:hover::before,
