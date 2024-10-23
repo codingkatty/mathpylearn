@@ -170,7 +170,9 @@
 </head>
 
 <body id="learn" onload="showEditor('Untitled')">
+
     <div class="navbar">
+
         <a class="logo" href="index.html"><img src="logonew.svg" width="40"></a>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -179,6 +181,7 @@
             <a href="challenge.html">Challenge</a>
             <a href="faq.html">FAQs</a>
         </div>
+
         <div class="theme-toggle-wrapper">
             <button style="cursor: pointer;" id="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -189,6 +192,7 @@
                 <i class="fa fa-times" style="display: none;"></i>
             </a>
         </div>
+
     </div>
 
     <div class="content">
@@ -198,6 +202,7 @@
             <button id="generate-question-button" onclick="generateQuestion()">Click For Practice Question</button>
             <p id="random-question"></p>
         </div>
+
         <div class="learn-container">
             <div class="lesson-list">
                 <ul>
@@ -213,6 +218,7 @@
                     <li><a href="#" onclick="showEditor('TryExcept')">Try...Except</a></li>
                 </ul>
             </div>
+
             <div class="editor-area">
                 <div id="editor-container">
                     <div id="editor-controls">
@@ -237,6 +243,7 @@
                         <div id="terminal"></div>
                     </div>
                 </div>
+
                 <div id="button-container">
                     <button id="run-button" onclick="runCode()">Run Code</button>
                     <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button>
@@ -250,6 +257,7 @@
                         <button id="lesson-reset-btn" class="reset-btn">Reset Progress</button>
                     </div>
                 </div>
+
             </div>
 
         </div>
@@ -288,8 +296,9 @@
         <div class="footer-bottom">
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
+
     </footer>
-    
+
     <button onclick="topFunction()" id="nav-top"><i class="material-icons">arrow_upward</i></button>
     <script src="script.js"></script>
     <script>
@@ -309,6 +318,7 @@
             });
         }
     </script>
+
 </body>
 
 </html>
