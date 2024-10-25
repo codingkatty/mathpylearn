@@ -105,44 +105,15 @@ body {
   width: auto;
 }
 
-/* content box fix for learn html */
-.content-learn {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  /* Stronger shadow for modern look */
-  transition: background-color 0.3s ease;
-  animation: fadeIn 1.2s ease-in-out;
-  /* Smooth content load animation */
-  margin-bottom: 35px;
-  color: black;
-}
-
-/* content box fix for challenge html */
-.content-challenge {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  /* Stronger shadow for modern look */
-  transition: background-color 0.3s ease;
-  animation: fadeIn 1.2s ease-in-out;
-  /* Smooth content load animation */
-  margin-bottom: 35px;
-  color: black;
-}
-
-/* Content Styles */
-.content {
+.content-home {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+/* Content Styles */
+.content {
   padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
