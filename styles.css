@@ -280,6 +280,7 @@ h2 {
   border: none;
   border-radius: 8px;
   color: #fff;
+  cursor: pointer;
 }
 
 /* Responsive Editor and Terminal */
@@ -457,17 +458,35 @@ a.clicked {
 /* Add these new styles to your existing styles.css file */
 
 /* Challenge Page Styles */
+
+.progress-container {
+  margin-bottom: 1.5rem;
+}
+
+.progress-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+#challenge-reset-btn {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+}
+
 .challenge-container {
   display: flex;
   gap: 2rem;
+  padding-left: 1.5rem;
+  background-color: #ecf0f1;
+  border-radius: 8px;
 }
 
 #challenge-list {
   flex: 0 0 300px;
   background-color: #ecf0f1;
   padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #challenge-list li {
@@ -521,6 +540,7 @@ a.clicked {
   padding: 1rem;
   width: 100%;
   text-align: left;
+  font-size: 1.1rem;
   border: none;
   outline: none;
   transition: 0.4s;
