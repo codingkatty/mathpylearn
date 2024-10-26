@@ -14,153 +14,6 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <style>
-        /* Footer section */
-        footer {
-            background: linear-gradient(135deg, #1c1c1c, #333);
-            color: #e6e6e6;
-            padding: 20px 0;
-            position: relative;
-            box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.4);
-            overflow: hidden;
-            border-top-left-radius: 40px;
-            border-top-right-radius: 40px;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            padding: 40px 20px;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 2;
-        }
-
-        .footer-section {
-            flex: 1;
-            margin: 15px;
-            min-width: 250px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-
-        .footer-section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .footer-section h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #ffffff;
-            background: linear-gradient(45deg, #007bff, #ff7bff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-        }
-
-        .footer-section p,
-        .footer-section ul {
-            font-size: 1rem;
-            color: #ccc;
-        }
-
-        .footer-section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .footer-section ul li {
-            margin: 8px 0;
-        }
-
-        .footer-section a {
-            color: #e6e6e6;
-            text-decoration: none;
-            position: relative;
-            transition: color 0.3s ease, background 0.3s ease;
-        }
-
-        .footer-section a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #007bff, #ff7bff);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .footer-section a:hover::after {
-            transform: scaleX(1);
-        }
-
-        .footer-section a:hover {
-            color: #ff7bff;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #151515;
-            font-size: 0.9rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .footer-bottom p {
-            margin: 0;
-            color: #aaa;
-        }
-
-        .social {
-            margin-top: 20px;
-        }
-
-        .social a {
-            color: #fff;
-            font-size: 1.5rem;
-            margin-right: 15px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
-            display: inline-block;
-            text-align: center;
-            padding: 10px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .social a:hover {
-            color: #ff7bff;
-            transform: scale(1.3);
-            box-shadow: 0 0 15px rgba(255, 123, 255, 0.7);
-        }
-
-        @media (max-width: 768px) {
-            .footer-content {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .footer-section {
-                margin-bottom: 20px;
-            }
-
-            .social a {
-                margin-right: 10px;
-            }
-        }
-    </style>
 </head>
 
 <body id="faq">
@@ -173,11 +26,13 @@
             <a href="challenge.html">Challenge</a>
             <a href="faq.html" class="active">FAQs</a>
         </div>
+
         <div class="theme-toggle-wrapper">
             <button style="cursor: pointer;" id="theme-toggle">
                 <i class="fas fa-sun"></i>
                 <i class="fas fa-moon"></i>
             </button>
+
             <a href="javascript:void(0);" class="icon" onclick="openMobileMenu()">
                 <i class="fa fa-bars"></i>
                 <i class="fa fa-times" style="display: none;"></i>
@@ -194,6 +49,7 @@
                     What is Math 4 Python?
                     <span class="fas fa-chevron-down"></span>
                 </button>
+
                 <div class="panel">
                     <p>Math 4 Python is an interactive learning platform designed to teach Python programming with a
                         focus on mathematical concepts. You'll get to solve real-world math problems using Python and
@@ -206,6 +62,7 @@
                     What do I need to get started?
                     <span class="fas fa-chevron-down"></span>
                 </button>
+
                 <div class="panel">
                     <p>You don't need any prior programming experience! All you need is an internet connection, a
                         browser, and a willingness to learn. The platform provides an interactive coding environment, so
@@ -218,6 +75,7 @@
                     Is Math 4 Python suitable for beginners?
                     <i class="fas fa-chevron-down"></i>
                 </button>
+
                 <div class="panel">
                     <p>Absolutely! Our platform is designed to cater to beginners as well as those with some programming
                         experience. We start with the basics and gradually progress to more advanced topics, ensuring a
@@ -230,6 +88,7 @@
                     How does the interactive coding environment work?
                     <i class="fas fa-chevron-down"></i>
                 </button>
+
                 <div class="panel">
                     <p>Our platform features an in-browser Python interpreter. You can write and execute Python code
                         directly in your web browser without the need for any local installations. This allows for
@@ -242,6 +101,7 @@
                     Can I save my progress and return to it later?
                     <i class="fas fa-chevron-down"></i>
                 </button>
+
                 <div class="panel">
                     <p>Currently, we don't have a built-in progress saving feature. However, we recommend keeping notes
                         of the lessons you've completed and any code you've written. We're working on implementing a
@@ -254,6 +114,7 @@
                     What types of math concepts are covered?
                     <i class="fas fa-chevron-down"></i>
                 </button>
+
                 <div class="panel">
                     <p>We cover a wide range of mathematical concepts, including basic arithmetic, algebra, geometry,
                         trigonometry, calculus, and statistics. Each concept is introduced alongside relevant Python
@@ -266,6 +127,7 @@
                     How often is new content added?
                     <i class="fas fa-chevron-down"></i>
                 </button>
+
                 <div class="panel">
                     <p>We strive to add new lessons and challenges regularly. Our team is constantly working on
                         developing new content to keep the learning experience fresh and engaging. We recommend checking
@@ -278,6 +140,7 @@
                     Is there a community forum for discussion and help?
                     <i class="fas fa-chevron-down"></i>
                 </button>
+
                 <div class="panel">
                     <p>While we don't currently have a built-in forum, we encourage users to join our community on
                         platforms like Discord or Reddit. These spaces are great for discussing problems, sharing
@@ -291,6 +154,7 @@
                     Can I use Math 4 Python for school or university coursework?
                     <i class="fas fa-chevron-down"></i>
                 </button>
+
                 <div class="panel">
                     <p>Absolutely! Math 4 Python is an excellent resource for supplementing your school or university
                         coursework. While it shouldn't replace your formal education, it can provide additional
@@ -304,12 +168,14 @@
                     Is there a mobile app for Math 4 Python?
                     <i class="fas fa-chevron-down"></i>
                 </button>
+
                 <div class="panel">
                     <p>Currently, Math 4 Python is a web-based platform optimized for desktop and mobile browsers. We
                         don't have a dedicated mobile app at the moment, but our website is responsive and works well on
                         mobile devices. We're considering developing a mobile app in the future based on user demand.
                     </p>
                 </div>
+
             </div>
 
         </div>
@@ -338,16 +204,17 @@
 
             <div class="footer-section social">
                 <h3>Follow Us</h3>
-                <a href="#"><span class="fab fa-facebook"></span></a>
-                <a href="#"><span class="fab fa-twitter"></span></a>
-                <a href="#"><span class="fab fa-linkedin"></span></a>
-                <a href="#"><span class="fab fa-github"></span></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
             </div>
         </div>
 
         <div class="footer-bottom">
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
+
     </footer>
 
 
@@ -368,6 +235,7 @@
             });
         };
     </script>
+
 </body>
 
 </html>

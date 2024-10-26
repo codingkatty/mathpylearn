@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="hamburger_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
 </head>
+
 <body id="challenge">
 
     <div class="navbar">
@@ -23,11 +27,13 @@
             <a href="challenge.html" class="active">Challenge</a>
             <a href="faq.html">FAQs</a>
         </div>
+
         <div class="theme-toggle-wrapper">
             <button style="cursor: pointer;" id="theme-toggle">
                 <i class="fas fa-sun"></i>
                 <i class="fas fa-moon"></i>
             </button>
+
             <a href="javascript:void(0);" class="icon" onclick="openMobileMenu()">
                 <i class="fa fa-bars"></i>
                 <i class="fa fa-times" style="display: none;"></i>
@@ -41,29 +47,44 @@
         <p>Welcome to the challenges section! Test your skills with various coding challenges.</p>
         <div class="progress-container">
             <h3>Challenge Progress</h3>
-            <div class="progress-bar">
-                <div id="challenge-progress" class="progress"></div>
+            <div class="progress-wrap">
+                <div class="progress-bar">
+                    <div id="challenge-progress" class="progress"></div>
+                </div>
+                <button id="challenge-reset-btn" class="reset-btn">Reset Progress</button>
             </div>
-            <button id="challenge-reset-btn" class="reset-btn">Reset Progress</button>
         </div>
+
         <div class="challenge-container">
             <ul id="challenge-list">
-                <li><a href="#" onclick="viewChallenge('Basic Math Challenge')"><i class="fas fa-calculator"></i> Basic Math Challenge</a></li>
-                <li><a href="#" onclick="viewChallenge('Logic Challenge')"><i class="fas fa-brain"></i> Logic Challenge</a></li>
-                <li><a href="#" onclick="viewChallenge('Data Structures Challenge')"><i class="fas fa-project-diagram"></i> Data Structures Challenge</a></li>
-                <li><a href="#" onclick="viewChallenge('String Manipulation')"><i class="fas fa-font"></i> String Manipulation Challenge</a></li>
-                <li><a href="#" onclick="viewChallenge('File Handling Challenge')"><i class="fas fa-file-alt"></i> File Handling Challenge</a></li>
-                <li><a href="#" onclick="viewChallenge('Dynamic Programming Challenge')"><i class="fas fa-chart-line"></i> Dynamic Programming Challenge</a></li>
-                <li><a href="#" onclick="viewChallenge('Object-Oriented Programming')"><i class="fas fa-cubes"></i> Object-Oriented Programming Challenge</a></li>
-                <li><a href="#" onclick="viewChallenge('Recursion')"><i class="fas fa-redo"></i> Recursion Challenge</a></li>
-                <li><a href="#" onclick="viewChallenge('Search Algorithm')"><i class="fas fa-search"></i> Search Algorithm Challenge</a></li>
+                <li><a href="#" onclick="viewChallenge('Basic Math Challenge')"><i class="fas fa-calculator"></i> Basic
+                        Math Challenge</a></li>
+                <li><a href="#" onclick="viewChallenge('Logic Challenge')"><i class="fas fa-brain"></i> Logic
+                        Challenge</a></li>
+                <li><a href="#" onclick="viewChallenge('Data Structures Challenge')"><i
+                            class="fas fa-project-diagram"></i> Data Structures Challenge</a></li>
+                <li><a href="#" onclick="viewChallenge('String Manipulation')"><i class="fas fa-font"></i> String
+                        Manipulation Challenge</a></li>
+                <li><a href="#" onclick="viewChallenge('File Handling Challenge')"><i class="fas fa-file-alt"></i> File
+                        Handling Challenge</a></li>
+                <li><a href="#" onclick="viewChallenge('Dynamic Programming Challenge')"><i
+                            class="fas fa-chart-line"></i> Dynamic Programming Challenge</a></li>
+                <li><a href="#" onclick="viewChallenge('Object-Oriented Programming')"><i class="fas fa-cubes"></i>
+                        Object-Oriented Programming Challenge</a></li>
+                <li><a href="#" onclick="viewChallenge('Recursion')"><i class="fas fa-redo"></i> Recursion Challenge</a>
+                </li>
+                <li><a href="#" onclick="viewChallenge('Search Algorithm')"><i class="fas fa-search"></i> Search
+                        Algorithm Challenge</a></li>
                 <li><a href="#" onclick="viewChallenge('Array')"><i class="fas fa-list-ol"></i> Array Challenge</a></li>
-                <li><a href="#" onclick="viewChallenge('Graph')"><i class="fas fa-project-diagram"></i> Graph Algorithm Challenge</a></li>
+                <li><a href="#" onclick="viewChallenge('Graph')"><i class="fas fa-project-diagram"></i> Graph Algorithm
+                        Challenge</a></li>
             </ul>
+
             <section class="challenge-description" id="challenge-description">
                 <h3>Challenge Description</h3>
                 <p>Select a challenge from the list to view its description and instructions.</p>
             </section>
+
         </div>
     </div>
 
@@ -72,10 +93,12 @@
         <div class="footer-content">
             <div class="footer-section about">
                 <h3>Math 4 Python</h3>
-                <p>Enhance your Python skills while solving math-focused challenges. Learn, code, and improve through interactive lessons with real-time feedback.</p>
+                <p>Enhance your Python skills while solving math-focused challenges. Learn, code, and improve through
+                    interactive lessons with real-time feedback.</p>
                 <p><i class="fas fa-envelope"></i> contact@math4python.com</p>
                 <p><i class="fas fa-phone"></i> +123 456 7890</p>
             </div>
+
             <div class="footer-section links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -86,6 +109,7 @@
                     <li><a href="faq.html">FAQs</a></li>
                 </ul>
             </div>
+
             <div class="footer-section social">
                 <h3>Follow Us</h3>
                 <a href="#"><i class="fab fa-facebook"></i></a>
@@ -93,10 +117,12 @@
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
             </div>
+
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
+
     </footer>
 
 
@@ -108,7 +134,7 @@
 
     <script>
         let mybutton = document.getElementById("nav-top");
-        window.onscroll = function() {scrollFunction()};
+        window.onscroll = function () { scrollFunction() };
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
@@ -125,4 +151,5 @@
     </script>
 
 </body>
+
 </html>

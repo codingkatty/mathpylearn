@@ -1,66 +1,73 @@
-
 .navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #2c3e50;
-    color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
 }
 
 .nav-links {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
 }
+
 .reset-btn {
-    background-color: #dc3545;
-  }
-  .btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-  }
-  .copy-btn {
-    background-color: #007bff;
-  }
-  
-  .copy-btn:hover {
-    background-color: #0056b3;
-  }
-  .btn i {
-    margin-right: 8px;
-  }
-  .button-container{
-    display: flex;
+  background-color: #dc3545;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.copy-btn {
+  background-color: #007bff;
+}
+
+.copy-btn:hover {
+  background-color: #0056b3;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.button-container {
+  display: flex;
   justify-content: center;
   gap: 10px;
-  }
+}
+
 .nav-links a.active,
 .nav-links a:hover {
-    background-color: #575757;
+  background-color: #575757;
 }
+
 .reset-btn:hover {
-    background-color: #c82333;
-  }
+  background-color: #c82333;
+}
+
 .theme-toggle-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
 }
 
 .icon {
@@ -68,39 +75,38 @@
   display: none;
 }
 
-
 .logo img {
-    width: 40px;
+  width: 40px;
 }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-    .nav-links {
-        width: 40vw;
-        flex-direction: column;
-        position: absolute;
-        top: 65px;
-        left: 0;
-        background-color: #2c3e50;
-        padding: 10px;
-        border-radius: 8px;
-        transition-property: width;
-        transition-duration: 1s;
-    }
+  .nav-links {
+    width: 40vw;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    background-color: #2c3e50;
+    padding: 10px;
+    border-radius: 8px;
+    transition-property: width;
+    transition-duration: 1s;
+  }
 
-    .nav-links a {
-      width: unset !important;
-    }
+  .nav-links a {
+    width: unset !important;
+  }
 
-    .navbar {
-        position: relative;
-    }
+  .navbar {
+    position: relative;
+  }
 
-    .icon {
-      display: block;
-    }
+  .icon {
+    display: block;
+  }
 
-    .nav-links.show {
-        display: flex;
-    }
+  .nav-links.show {
+    display: flex;
+  }
 }

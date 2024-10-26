@@ -84,12 +84,6 @@ body {
   box-shadow: inset 0px 0px 25px #1479ea;
 }
 
-/* .navbar a.active {
-  background-color: #007bff;
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
-} */
-
 /* Theme Toggle Alignment Fix */
 .theme-toggle {
   margin-left: auto;
@@ -111,6 +105,13 @@ body {
   width: auto;
 }
 
+.content-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Content Styles */
 .content {
   padding: 60px 20px;
@@ -125,6 +126,10 @@ body {
   /* Smooth content load animation */
   margin-bottom: 35px;
   color: black;
+}
+
+.content .heading-text {
+  font-size: 18px;
 }
 
 @keyframes fadeIn {
@@ -153,16 +158,17 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 /* Features Section */
-/* Features Section */
 .features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin-top: 40px;
+  width: 100%;
 }
 
 .feature {
@@ -172,6 +178,7 @@ h2 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Added background transition */
   text-align: center;
+  width: 300px;
 }
 
 .feature img {
@@ -219,6 +226,21 @@ h2 {
   }
 }
 
+.call-to-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.call-to-action h2 {
+  margin: 30px 0 10px 0 !important;
+}
+
+.call-to-action p {
+  margin: 10px 0 10px 0;
+}
+
 /* Call-to-Action Button */
 .cta-button {
   display: inline-block;
@@ -226,7 +248,7 @@ h2 {
   background-color: #007bff;
   color: white;
   border-radius: 50px;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
@@ -237,6 +259,15 @@ h2 {
   background-color: #0056b3;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+}
+
+#generate-question-button {
+  padding: 5px 10px;
+  background: #dc3545;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* Responsive Editor and Terminal */
@@ -289,6 +320,28 @@ h2 {
   margin-right: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.lesson-list a {
+  text-decoration: none;
+}
+
+.lesson-list a:hover {
+  text-decoration: underline;
+}
+
+#lesson-reset-btn {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
 }
 
 #clear-button {
@@ -392,17 +445,35 @@ a.clicked {
 /* Add these new styles to your existing styles.css file */
 
 /* Challenge Page Styles */
+
+.progress-container {
+  margin-bottom: 1.5rem;
+}
+
+.progress-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+#challenge-reset-btn {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+}
+
 .challenge-container {
   display: flex;
   gap: 2rem;
+  padding-left: 1.5rem;
+  background-color: #ecf0f1;
+  border-radius: 8px;
 }
 
 #challenge-list {
   flex: 0 0 300px;
   background-color: #ecf0f1;
   padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #challenge-list li {
@@ -456,6 +527,7 @@ a.clicked {
   padding: 1rem;
   width: 100%;
   text-align: left;
+  font-size: 1.1rem;
   border: none;
   outline: none;
   transition: 0.4s;
@@ -562,7 +634,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 40px 20px;
+  padding: 20px;
   flex-wrap: wrap;
   position: relative;
   z-index: 2;
@@ -572,19 +644,13 @@ footer {
   flex: 1;
   margin: 15px;
   min-width: 250px;
-  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   padding: 20px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.footer-section:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
 .footer-section h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 20px;
   color: #ffffff;
   background: linear-gradient(45deg, #007bff, #ff7bff);
@@ -611,13 +677,14 @@ footer {
 }
 
 .footer-section a {
+  letter-spacing: 1px;
   color: #e6e6e6;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease, background 0.3s ease;
 }
 
-.footer-section a::after {
+.footer-section .link-element::after {
   content: "";
   position: absolute;
   left: 0;
@@ -658,19 +725,22 @@ footer {
 
 .social a {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-right: 15px;
   transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
   display: inline-block;
   text-align: center;
-  padding: 10px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
 }
 
+.social i {
+  padding: 10px;
+}
+
 .social a:hover {
   color: #ff7bff;
-  transform: scale(1.3);
+  transform: scale(1.1);
   box-shadow: 0 0 15px rgba(255, 123, 255, 0.7);
 }
 

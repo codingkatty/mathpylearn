@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="hamburger_menu.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,6 +22,7 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         .container {
             width: 80%;
             margin: 20px auto;
@@ -29,17 +32,22 @@
             border-radius: 8px;
             color: white;
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             text-align: center;
             color: #2C3E50;
         }
+
         a {
             color: #3498DB;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .banner {
             background-color: #2980B9;
             color: white;
@@ -48,19 +56,33 @@
             text-align: center;
             border-radius: 8px 8px 0 0;
         }
+
         .banner h1 {
             margin: 0;
             font-size: 2em;
             color: beige;
         }
+
         .section {
             margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
+
+        .section p {
+            text-align: center;
+            letter-spacing: 1px;
+            width: 85%;
+        }
+
         .cards {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
+
         .card {
             background: #fff;
             padding: 15px;
@@ -68,169 +90,32 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             flex: 1;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-        .card p{
+
+        .card p {
             color: black;
         }
-        .title{
+
+        .title {
             color: white;
         }
-        .container h2{
+
+        .container h2 {
             color: beige;
         }
-        .dark-theme .card h3{
+
+        .dark-theme .card h3 {
             color: black;
-        }
-        /* Footer section */
-        footer {
-            background: linear-gradient(135deg, #1c1c1c, #333);
-            color: #e6e6e6;
-            padding: 20px 0;
-            position: relative;
-            box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.4);
-            overflow: hidden;
-            border-top-left-radius: 40px;
-            border-top-right-radius: 40px;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            padding: 40px 20px;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 2;
-        }
-
-        .footer-section {
-            flex: 1;
-            margin: 15px;
-            min-width: 250px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-
-        .footer-section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .footer-section h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #ffffff;
-            background: linear-gradient(45deg, #007bff, #ff7bff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-        }
-
-        .footer-section p,
-        .footer-section ul {
-            font-size: 1rem;
-            color: #ccc;
-        }
-
-        .footer-section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .footer-section ul li {
-            margin: 8px 0;
-        }
-
-        .footer-section a {
-            color: #e6e6e6;
-            text-decoration: none;
-            position: relative;
-            transition: color 0.3s ease, background 0.3s ease;
-        }
-
-        .footer-section a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #007bff, #ff7bff);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .footer-section a:hover::after {
-            transform: scaleX(1);
-        }
-
-        .footer-section a:hover {
-            color: #ff7bff;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #151515;
-            font-size: 0.9rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .footer-bottom p {
-            margin: 0;
-            color: #aaa;
-        }
-
-        .social {
-            margin-top: 20px;
-        }
-
-        .social a {
-            color: #fff;
-            font-size: 1.5rem;
-            margin-right: 15px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
-            display: inline-block;
-            text-align: center;
-            padding: 10px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .social a:hover {
-            color: #ff7bff;
-            transform: scale(1.3);
-            box-shadow: 0 0 15px rgba(255, 123, 255, 0.7);
-        }
-
-        @media (max-width: 768px) {
-            .footer-content {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .footer-section {
-                margin-bottom: 20px;
-            }
-
-            .social a {
-                margin-right: 10px;
-            }
         }
     </style>
 
 </head>
 
-<body>      
+<body>
     <div class="navbar">
         <a class="logo" href="index.html"><img src="logonew.svg" width="40"></a>
         <div class="nav-links">
@@ -240,29 +125,39 @@
             <a href="challenge.html">Challenge</a>
             <a href="faq.html">FAQs</a>
         </div>
+
         <div class="theme-toggle-wrapper">
             <button style="cursor: pointer;" id="theme-toggle">
                 <i class="fas fa-sun"></i>
                 <i class="fas fa-moon"></i>
             </button>
+
             <a href="javascript:void(0);" class="icon" onclick="openMobileMenu()">
                 <i class="fa fa-bars"></i>
                 <i class="fa fa-times" style="display: none;"></i>
             </a>
         </div>
     </div>
+
     <div class="container">
         <div class="banner">
             <h1>About Math 4 Python</h1>
         </div>
+
         <div class="section">
             <h2>Our Mission</h2>
-            <p>At Math 4 Python, we are dedicated to combining the power of Python programming with key mathematical concepts. Our platform focuses on helping learners enhance their problem-solving skills through interactive coding experiences that emphasize math applications.</p>
+            <p>At Math 4 Python, we are dedicated to combining the power of Python programming with key mathematical
+                concepts. Our platform focuses on helping learners enhance their problem-solving skills through
+                interactive coding experiences that emphasize math applications.</p>
         </div>
+
         <div class="section">
             <h2>Who Is It For?</h2>
-            <p>Whether you are a beginner in Python or a math enthusiast looking to apply coding to real-world problems, Math 4 Python offers an engaging and structured learning path. Our platform caters to students, professionals, and hobbyists aiming to build or enhance their coding and mathematical skills.</p>
+            <p>Whether you are a beginner in Python or a math enthusiast looking to apply coding to real-world problems,
+                Math 4 Python offers an engaging and structured learning path. Our platform caters to students,
+                professionals, and hobbyists aiming to build or enhance their coding and mathematical skills.</p>
         </div>
+
         <div class="section">
             <h2>What We Offer</h2>
             <div class="cards">
@@ -280,13 +175,17 @@
                 </div>
             </div>
         </div>
+
         <div class="section">
             <h2>Why Choose Math 4 Python?</h2>
-            <p>We provide a unique approach to learning by blending coding with math, offering practical, real-world challenges that make the learning process engaging and effective.</p>
+            <p>We provide a unique approach to learning by blending coding with math, offering practical, real-world
+                challenges that make the learning process engaging and effective.</p>
         </div>
+
         <div class="section">
             <h2>Contact Us</h2>
-            <p>If you have any questions or would like more information, feel free to reach out to us at <a href="https://magicmath.co/">https://magicmath.co/</a>.</p>
+            <p>If you have any questions or would like more information, feel free to reach out to us at <a
+                    href="https://magicmath.co/">https://magicmath.co/</a>.</p>
         </div>
     </div>
 
@@ -313,16 +212,17 @@
 
             <div class="footer-section social">
                 <h3>Follow Us</h3>
-                <a href="#"><span class="fab fa-facebook"></span></a>
-                <a href="#"><span class="fab fa-twitter"></span></a>
-                <a href="#"><span class="fab fa-linkedin"></span></a>
-                <a href="#"><span class="fab fa-github"></span></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
             </div>
         </div>
 
         <div class="footer-bottom">
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
+
     </footer>
 
     <button onclick="topFunction()" id="nav-top">
@@ -333,14 +233,14 @@
 
     <script>
         let mybutton = document.getElementById("nav-top");
-        window.onscroll = function() {scrollFunction()};
+        window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-                }
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
         function topFunction() {
             window.scrollTo({
@@ -349,5 +249,7 @@
             });
         }
     </script>
+    
 </body>
+
 </html>

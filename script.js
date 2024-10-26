@@ -687,7 +687,6 @@ function viewChallenge(challengeName) {
     <li>Remove duplicates from an array while maintaining order.</li>
 </ul>
 
-
             `;
       break;
     case "Graph":
@@ -701,8 +700,6 @@ function viewChallenge(challengeName) {
                   <li>Add edges for both directed and undirected graphs.</li>
                   <li>Represent the graph using adjacency lists.</li>
               </ul>
-
-
 
             `;
       break;

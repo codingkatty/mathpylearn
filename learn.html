@@ -20,157 +20,12 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <style>
-        /* Footer section */
-        footer {
-            background: linear-gradient(135deg, #1c1c1c, #333);
-            color: #e6e6e6;
-            padding: 20px 0;
-            position: relative;
-            box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.4);
-            overflow: hidden;
-            border-top-left-radius: 40px;
-            border-top-right-radius: 40px;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            padding: 40px 20px;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 2;
-        }
-
-        .footer-section {
-            flex: 1;
-            margin: 15px;
-            min-width: 250px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-
-        .footer-section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .footer-section h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #ffffff;
-            background: linear-gradient(45deg, #007bff, #ff7bff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-        }
-
-        .footer-section p,
-        .footer-section ul {
-            font-size: 1rem;
-            color: #ccc;
-        }
-
-        .footer-section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .footer-section ul li {
-            margin: 8px 0;
-        }
-
-        .footer-section a {
-            color: #e6e6e6;
-            text-decoration: none;
-            position: relative;
-            transition: color 0.3s ease, background 0.3s ease;
-        }
-
-        .footer-section a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #007bff, #ff7bff);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .footer-section a:hover::after {
-            transform: scaleX(1);
-        }
-
-        .footer-section a:hover {
-            color: #ff7bff;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #151515;
-            font-size: 0.9rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .footer-bottom p {
-            margin: 0;
-            color: #aaa;
-        }
-
-        .social {
-            margin-top: 20px;
-        }
-
-        .social a {
-            color: #fff;
-            font-size: 1.5rem;
-            margin-right: 15px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
-            display: inline-block;
-            text-align: center;
-            padding: 10px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .social a:hover {
-            color: #ff7bff;
-            transform: scale(1.3);
-            box-shadow: 0 0 15px rgba(255, 123, 255, 0.7);
-        }
-
-        @media (max-width: 768px) {
-            .footer-content {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .footer-section {
-                margin-bottom: 20px;
-            }
-
-            .social a {
-                margin-right: 10px;
-            }
-        }
-    </style>
 </head>
 
 <body id="learn" onload="showEditor('Untitled')">
+
     <div class="navbar">
+
         <a class="logo" href="index.html"><img src="logonew.svg" width="40"></a>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -179,6 +34,7 @@
             <a href="challenge.html">Challenge</a>
             <a href="faq.html">FAQs</a>
         </div>
+
         <div class="theme-toggle-wrapper">
             <button style="cursor: pointer;" id="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -189,6 +45,7 @@
                 <i class="fa fa-times" style="display: none;"></i>
             </a>
         </div>
+
     </div>
 
     <div class="content">
@@ -198,6 +55,7 @@
             <button id="generate-question-button" onclick="generateQuestion()">Click For Practice Question</button>
             <p id="random-question"></p>
         </div>
+
         <div class="learn-container">
             <div class="lesson-list">
                 <ul>
@@ -213,6 +71,7 @@
                     <li><a href="#" onclick="showEditor('TryExcept')">Try...Except</a></li>
                 </ul>
             </div>
+
             <div class="editor-area">
                 <div id="editor-container">
                     <div id="editor-controls">
@@ -220,9 +79,6 @@
                         <button id="reset-code" class="btn reset-btn">
                             <i class="fas fa-redo"></i> Reset Code
                         </button> <br>
-                        <!-- <button id="copy-code">
-                            <i class="fas fa-copy"></i> Copy Code
-                        </button> -->
                         <button id="copy-code" class="btn copy-btn">
                             <i class="fas fa-copy"></i> Copy Code
                         </button>
@@ -237,6 +93,7 @@
                         <div id="terminal"></div>
                     </div>
                 </div>
+
                 <div id="button-container">
                     <button id="run-button" onclick="runCode()">Run Code</button>
                     <button id="clear-button" onclick="clearTerminal()">Clear Terminal</button>
@@ -244,12 +101,15 @@
                     <br>
                     <div class="progress-container">
                         <h3>Lesson Progress</h3>
-                        <div class="progress-bar">
-                            <div id="lesson-progress" class="progress"></div>
+                        <div class="progress-wrap">
+                            <div class="progress-bar">
+                                <div id="lesson-progress" class="progress"></div>
+                            </div>
+                            <button id="lesson-reset-btn" class="reset-btn">Reset Progress</button>
                         </div>
-                        <button id="lesson-reset-btn" class="reset-btn">Reset Progress</button>
                     </div>
                 </div>
+
             </div>
 
         </div>
@@ -278,18 +138,19 @@
 
             <div class="footer-section social">
                 <h3>Follow Us</h3>
-                <a href="#"><span class="fab fa-facebook"></span></a>
-                <a href="#"><span class="fab fa-twitter"></span></a>
-                <a href="#"><span class="fab fa-linkedin"></span></a>
-                <a href="#"><span class="fab fa-github"></span></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
             </div>
         </div>
 
         <div class="footer-bottom">
             <p>&copy; 2024 Math 4 Python. All Rights Reserved.</p>
         </div>
+
     </footer>
-    
+
     <button onclick="topFunction()" id="nav-top"><i class="material-icons">arrow_upward</i></button>
     <script src="script.js"></script>
     <script>
@@ -309,6 +170,7 @@
             });
         }
     </script>
+
 </body>
 
 </html>
