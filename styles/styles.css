@@ -28,8 +28,6 @@ body {
 .navbar .nav-links {
   display: flex;
   gap: 20px;
-  flex-grow: 1;
-  /* Ensures links take up available space */
 }
 
 #theme-toggle {
