@@ -16,5 +16,5 @@ function handleSubmit() {
     return false; // Prevents form submission for demo purposes
 }
 function goBack() {
-    window.location.href = "index.html"; // Redirect to index.html
+    window.location.href = "https://magicmath.co/"; // Redirect to index.html
 }
